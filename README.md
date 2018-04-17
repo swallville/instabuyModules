@@ -11,7 +11,15 @@ yarn add instabuymodules
 bower install instabuymodules --save
 ```
 ## Usage
+### Build 
+```sh
+npm run build
+```
 ### Test 
 ```sh
 npm run test
+```
+### Coverage 
+```sh
+npm run cover
 ```
