@@ -1,5 +1,5 @@
 'use strict';
-require('reflect-metadata')
+var reflect = require('reflect-metadata')
 var expect = require('chai').expect;
 var index = require('../dist/index.js');
 

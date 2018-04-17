@@ -1,0 +1,476 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for dist/shared/services/request.service.js</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../../prettify.css" />
+    <link rel="stylesheet" href="../../../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../../../index.html">all files</a> / <a href="index.html">dist/shared/services/</a> request.service.js
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">25.47% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>27/106</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">20.9% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>14/67</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">15.79% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>3/19</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">25.25% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>25/99</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line low'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">"use strict";
+var __decorate = (this &amp;&amp; this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c &lt; 3 ? target : <span class="branch-1 cbranch-no" title="branch not covered" >desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc,</span> d;
+    <span class="missing-if-branch" title="else path not taken" >E</span>if (typeof Reflect === "object" &amp;&amp; typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else <span class="cstat-no" title="statement not covered" >for (var i = decorators.length - 1; i &gt;= 0; i--) <span class="cstat-no" title="statement not covered" >if (d = decorators[i]) <span class="cstat-no" title="statement not covered" >r = (c &lt; 3 ? d(r) : c &gt; 3 ? d(target, key, r) : d(target, key)) || r;</span></span></span>
+    return c &gt; 3 &amp;&amp; <span class="branch-1 cbranch-no" title="branch not covered" >r </span>&amp;&amp; <span class="branch-2 cbranch-no" title="branch not covered" >Object.defineProperty(target, key, r),</span> r;
+};
+var __metadata = (this &amp;&amp; this.__metadata) || function (k, v) {
+    <span class="missing-if-branch" title="else path not taken" >E</span>if (typeof Reflect === "object" &amp;&amp; typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+var core_1 = require("@angular/core");
+var http_1 = require("@angular/http");
+require("rxjs/add/operator/map");
+var qs_1 = require("qs");
+var response_model_1 = require("../models/response.model");
+var IBRequestService = (function () {
+<span class="fstat-no" title="function not covered" >    function IBRequestService(http) {</span>
+<span class="cstat-no" title="statement not covered" >        this.http = http;</span>
+        // protected storeId: string = "56e2df40072d4127659b32d5"; // laconfesserie
+        // protected storeId: string = "55ca6b49072d4167d3a815e9"; // hortimais
+        // protected storeId: string = "56d5afd6072d4145fc30d70e"; // don durica
+        // protected storeId: string = "56fc1959072d4150caab0f60"; // benutri
+        // protected storeId: string = "57edc21b072d41439fc24175"; // pomar
+        // protected storeId: string = "55cb8eeb072d416ddda815e7"; // pao dourado
+        // protected storeId: string = "55c17d73072d4126ea180fe5"; // cayke store
+        // protected storeId: string = "58ab8cf7072d412f6a199f88"; // teclar
+<span class="cstat-no" title="statement not covered" >        this.domain = "https://instabuy.com.br";</span>
+<span class="cstat-no" title="statement not covered" >        this.api = "/apiv3";</span>
+<span class="cstat-no" title="statement not covered" >        if (window.location.host.replace('www.', '').indexOf('localhost:') == -1) {</span>
+<span class="cstat-no" title="statement not covered" >            this.startProccess();</span>
+        }
+        else {
+<span class="cstat-no" title="statement not covered" >            this.storeId = "55c17d73072d4126ea180fe5";</span>
+        }
+    }
+    IBRequestService.prototype.startProccess = <span class="fstat-no" title="function not covered" >function () {</span>
+<span class="cstat-no" title="statement not covered" >        this.storeId = undefined;</span>
+<span class="cstat-no" title="statement not covered" >        this.subdomain = undefined;</span>
+<span class="cstat-no" title="statement not covered" >        this.custom_domain = undefined;</span>
+<span class="cstat-no" title="statement not covered" >        var _host = window.location.host.replace('www.', '');</span>
+<span class="cstat-no" title="statement not covered" >        if (_host.indexOf('instabuy.com.br') == -1) {</span>
+<span class="cstat-no" title="statement not covered" >            this.domain = location.protocol + "//" + _host;</span>
+<span class="cstat-no" title="statement not covered" >            this.custom_domain = _host;</span>
+        }
+        else {
+<span class="cstat-no" title="statement not covered" >            this.subdomain = _host.split('.')[0];</span>
+        }
+    };
+    IBRequestService.prototype.removeSpaces = <span class="fstat-no" title="function not covered" >function (value) {</span>
+<span class="cstat-no" title="statement not covered" >        if (value)</span>
+<span class="cstat-no" title="statement not covered" >            return value.split(' ').join('');</span>
+<span class="cstat-no" title="statement not covered" >        return "";</span>
+    };
+    // PREPARACAO DA CHAMADA
+    // NAO EH PRECISO OBRIGATORIO OS CAMPOS DE ARGS, DOMAIN, API
+    IBRequestService.prototype.createUrl = <span class="fstat-no" title="function not covered" >function (endpoint, args, domain, api) {</span>
+<span class="cstat-no" title="statement not covered" >        if (args === void 0) { <span class="cstat-no" title="statement not covered" >args = ''; </span>}</span>
+<span class="cstat-no" title="statement not covered" >        if (domain === void 0) { <span class="cstat-no" title="statement not covered" >domain = ''; </span>}</span>
+<span class="cstat-no" title="statement not covered" >        if (api === void 0) { <span class="cstat-no" title="statement not covered" >api = ''; </span>}</span>
+<span class="cstat-no" title="statement not covered" >        endpoint = this.removeSpaces(endpoint);</span>
+<span class="cstat-no" title="statement not covered" >        args = this.removeSpaces(args);</span>
+<span class="cstat-no" title="statement not covered" >        domain = this.removeSpaces(domain);</span>
+<span class="cstat-no" title="statement not covered" >        api = this.removeSpaces(api);</span>
+<span class="cstat-no" title="statement not covered" >        if (!domain)</span>
+<span class="cstat-no" title="statement not covered" >            domain = this.domain;</span>
+<span class="cstat-no" title="statement not covered" >        if (!api)</span>
+<span class="cstat-no" title="statement not covered" >            api = this.api;</span>
+<span class="cstat-no" title="statement not covered" >        if (endpoint[0] != '/')</span>
+<span class="cstat-no" title="statement not covered" >            endpoint = '/' + endpoint;</span>
+<span class="cstat-no" title="statement not covered" >        if (endpoint.lastIndexOf('.json') == -1)</span>
+<span class="cstat-no" title="statement not covered" >            endpoint += '.json';</span>
+<span class="cstat-no" title="statement not covered" >        if (args.indexOf('store_id=') == -1 &amp;&amp; args.indexOf('subdomain=') == -1) {</span>
+<span class="cstat-no" title="statement not covered" >            if (args.length &gt; 0 &amp;&amp; args[args.length - 1] != '&amp;')</span>
+<span class="cstat-no" title="statement not covered" >                args += '&amp;';</span>
+<span class="cstat-no" title="statement not covered" >            if (this.storeId)</span>
+<span class="cstat-no" title="statement not covered" >                args += 'store_id=' + this.storeId;</span>
+            else <span class="cstat-no" title="statement not covered" >if (this.subdomain)</span>
+<span class="cstat-no" title="statement not covered" >                args += 'subdomain=' + this.subdomain;</span>
+            else <span class="cstat-no" title="statement not covered" >if (this.custom_domain)</span>
+<span class="cstat-no" title="statement not covered" >                args += 'custom_domain=' + this.custom_domain;</span>
+        }
+<span class="cstat-no" title="statement not covered" >        if (args &amp;&amp; args[0] != '?')</span>
+<span class="cstat-no" title="statement not covered" >            args = '?' + args;</span>
+<span class="cstat-no" title="statement not covered" >        var url = domain + api + endpoint + args;</span>
+<span class="cstat-no" title="statement not covered" >        return url;</span>
+    };
+    // CHAMADA GERAL
+    IBRequestService.prototype.getRequest = <span class="fstat-no" title="function not covered" >function (url) {</span>
+<span class="cstat-no" title="statement not covered" >        var options = new http_1.RequestOptions();</span>
+<span class="cstat-no" title="statement not covered" >        options.withCredentials = true;</span>
+<span class="cstat-no" title="statement not covered" >        return this.http.get(url, options)</span>
+            .map(<span class="fstat-no" title="function not covered" >function (response) {</span> <span class="cstat-no" title="statement not covered" >return new response_model_1.IBResponse(response.json()); </span>});
+    };
+    IBRequestService.prototype.postRequest = <span class="fstat-no" title="function not covered" >function (url, postDocument) {</span>
+<span class="cstat-no" title="statement not covered" >        var options = new http_1.RequestOptions();</span>
+<span class="cstat-no" title="statement not covered" >        options.withCredentials = true;</span>
+<span class="cstat-no" title="statement not covered" >        return this.http.post(url, postDocument, options)</span>
+            .map(<span class="fstat-no" title="function not covered" >function (response) {</span> <span class="cstat-no" title="statement not covered" >return new response_model_1.IBResponse(response.json()); </span>});
+    };
+    IBRequestService.prototype.postXWWFormUrlEnconded = <span class="fstat-no" title="function not covered" >function (url, postDocument) {</span>
+<span class="cstat-no" title="statement not covered" >        var options = new http_1.RequestOptions();</span>
+<span class="cstat-no" title="statement not covered" >        options.headers = new http_1.Headers({ 'Content-Type': 'application/x-www-form-urlencoded' });</span>
+<span class="cstat-no" title="statement not covered" >        options.withCredentials = true;</span>
+<span class="cstat-no" title="statement not covered" >        var body = qs_1.stringify({ json_data: JSON.stringify(postDocument) });</span>
+<span class="cstat-no" title="statement not covered" >        return this.http.post(url, body, options)</span>
+            .map(<span class="fstat-no" title="function not covered" >function (response) {</span> <span class="cstat-no" title="statement not covered" >return new response_model_1.IBResponse(response.json()); </span>});
+    };
+    IBRequestService.prototype.putRequest = <span class="fstat-no" title="function not covered" >function (url, postDocument) {</span>
+<span class="cstat-no" title="statement not covered" >        var options = new http_1.RequestOptions();</span>
+<span class="cstat-no" title="statement not covered" >        options.withCredentials = true;</span>
+<span class="cstat-no" title="statement not covered" >        return this.http.put(url, postDocument, options)</span>
+            .map(<span class="fstat-no" title="function not covered" >function (response) {</span> <span class="cstat-no" title="statement not covered" >return new response_model_1.IBResponse(response.json()); </span>});
+    };
+    IBRequestService.prototype.deleteRequest = <span class="fstat-no" title="function not covered" >function (url) {</span>
+<span class="cstat-no" title="statement not covered" >        var options = new http_1.RequestOptions();</span>
+<span class="cstat-no" title="statement not covered" >        options.withCredentials = true;</span>
+<span class="cstat-no" title="statement not covered" >        return this.http.delete(url, options)</span>
+            .map(<span class="fstat-no" title="function not covered" >function (response) {</span> <span class="cstat-no" title="statement not covered" >return new response_model_1.IBResponse(response.json()); </span>});
+    };
+    //PUBLIC METHODS
+    IBRequestService.prototype.uploadFile = <span class="fstat-no" title="function not covered" >function (file) {</span>
+<span class="cstat-no" title="statement not covered" >        var formData = new FormData();</span>
+<span class="cstat-no" title="statement not covered" >        formData.append('file', file);</span>
+<span class="cstat-no" title="statement not covered" >        var headers = new http_1.Headers();</span>
+        // It is very important to leave the Content-Type empty
+        // do not use headers.append('Content-Type', 'multipart/form-data');
+<span class="cstat-no" title="statement not covered" >        var options = new http_1.RequestOptions({ headers: headers });</span>
+<span class="cstat-no" title="statement not covered" >        return this.http.post(this.createUrl('upload_file.json'), formData, options)</span>
+            .map(<span class="fstat-no" title="function not covered" >function (response) {</span> <span class="cstat-no" title="statement not covered" >return new response_model_1.IBResponse(response.json()); </span>});
+    };
+    return IBRequestService;
+}());
+IBRequestService = __decorate([
+    core_1.Injectable(),
+    __metadata("design:paramtypes", [http_1.Http])
+], IBRequestService);
+exports.IBRequestService = IBRequestService;
+//# sourceMappingURL=request.service.js.map</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Tue Apr 17 2018 16:56:26 GMT-0300 (-03)
+</div>
+</div>
+<script src="../../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../../sorter.js"></script>
+</body>
+</html>

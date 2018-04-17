@@ -1,0 +1,1130 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for dist/shared/services/store.service.js</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../../prettify.css" />
+    <link rel="stylesheet" href="../../../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../../../index.html">all files</a> / <a href="index.html">dist/shared/services/</a> store.service.js
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">27.27% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>75/275</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">17.07% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>21/123</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">14.04% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>8/57</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">27.07% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>72/266</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line low'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138
+139
+140
+141
+142
+143
+144
+145
+146
+147
+148
+149
+150
+151
+152
+153
+154
+155
+156
+157
+158
+159
+160
+161
+162
+163
+164
+165
+166
+167
+168
+169
+170
+171
+172
+173
+174
+175
+176
+177
+178
+179
+180
+181
+182
+183
+184
+185
+186
+187
+188
+189
+190
+191
+192
+193
+194
+195
+196
+197
+198
+199
+200
+201
+202
+203
+204
+205
+206
+207
+208
+209
+210
+211
+212
+213
+214
+215
+216
+217
+218
+219
+220
+221
+222
+223
+224
+225
+226
+227
+228
+229
+230
+231
+232
+233
+234
+235
+236
+237
+238
+239
+240
+241
+242
+243
+244
+245
+246
+247
+248
+249
+250
+251
+252
+253
+254
+255
+256
+257
+258
+259
+260
+261
+262
+263
+264
+265
+266
+267
+268
+269
+270
+271
+272
+273
+274
+275
+276
+277
+278
+279
+280
+281
+282
+283
+284
+285
+286
+287
+288
+289
+290
+291
+292
+293
+294
+295
+296
+297
+298
+299
+300
+301
+302
+303
+304
+305
+306
+307
+308
+309
+310
+311
+312
+313
+314
+315
+316
+317
+318
+319
+320
+321
+322
+323
+324
+325
+326
+327
+328
+329
+330
+331
+332
+333
+334
+335
+336
+337
+338
+339
+340
+341
+342
+343
+344
+345
+346
+347
+348
+349
+350
+351
+352
+353
+354
+355
+356</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">"use strict";
+var __extends = (this &amp;&amp; this.__extends) || (function () {
+    var extendStatics = Object.setPrototypeOf ||
+        (<span class="branch-1 cbranch-no" title="branch not covered" >{ __proto__: [] } instanceof Array </span>&amp;&amp; <span class="fstat-no" title="function not covered" ><span class="branch-2 cbranch-no" title="branch not covered" >function (d, b) {</span> <span class="cstat-no" title="statement not covered" >d.__proto__ = b; </span>})</span> ||
+<span class="fstat-no" title="function not covered" ><span class="branch-3 cbranch-no" title="branch not covered" >        function (d, b) {</span> <span class="cstat-no" title="statement not covered" >for (var p in b) <span class="cstat-no" title="statement not covered" >if (b.hasOwnProperty(p)) <span class="cstat-no" title="statement not covered" >d[p] = b[p]; </span></span></span>};</span>
+    return function (d, b) {
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? <span class="branch-0 cbranch-no" title="branch not covered" >Object.create(b) </span>: (__.prototype = b.prototype, new __());
+    };
+})();
+var __decorate = (this &amp;&amp; this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c &lt; 3 ? target : <span class="branch-1 cbranch-no" title="branch not covered" >desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc,</span> d;
+    <span class="missing-if-branch" title="else path not taken" >E</span>if (typeof Reflect === "object" &amp;&amp; typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else <span class="cstat-no" title="statement not covered" >for (var i = decorators.length - 1; i &gt;= 0; i--) <span class="cstat-no" title="statement not covered" >if (d = decorators[i]) <span class="cstat-no" title="statement not covered" >r = (c &lt; 3 ? d(r) : c &gt; 3 ? d(target, key, r) : d(target, key)) || r;</span></span></span>
+    return c &gt; 3 &amp;&amp; <span class="branch-1 cbranch-no" title="branch not covered" >r </span>&amp;&amp; <span class="branch-2 cbranch-no" title="branch not covered" >Object.defineProperty(target, key, r),</span> r;
+};
+var __metadata = (this &amp;&amp; this.__metadata) || function (k, v) {
+    <span class="missing-if-branch" title="else path not taken" >E</span>if (typeof Reflect === "object" &amp;&amp; typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+var core_1 = require("@angular/core");
+var http_1 = require("@angular/http");
+var router_1 = require("@angular/router");
+var cart_service_1 = require("./cart.service");
+var store_model_1 = require("../models/store.model");
+var layout_model_1 = require("../models/layout.model");
+var response_model_1 = require("../models/response.model");
+var request_service_1 = require("../services/request.service");
+var observable_module_1 = require("../modules/observable.module");
+var coupon_model_1 = require("../models/coupon.model");
+var general_module_1 = require("../modules/general.module");
+var util_model_1 = require("../models/util.model");
+var list_model_1 = require("../models/list.model");
+var IBItemsSortEnum;
+(function (IBItemsSortEnum) {
+    IBItemsSortEnum[IBItemsSortEnum["recents"] = 0] = "recents";
+    IBItemsSortEnum[IBItemsSortEnum["nameaz"] = 1] = "nameaz";
+    IBItemsSortEnum[IBItemsSortEnum["nameza"] = 2] = "nameza";
+    IBItemsSortEnum[IBItemsSortEnum["pricemin"] = 3] = "pricemin";
+    IBItemsSortEnum[IBItemsSortEnum["pricemax"] = 4] = "pricemax";
+})(IBItemsSortEnum = exports.IBItemsSortEnum || (exports.IBItemsSortEnum = {}));
+var IBItemsCallOptionsModel = (function () {
+<span class="fstat-no" title="function not covered" >    function IBItemsCallOptionsModel() {</span>
+    }
+    IBItemsCallOptionsModel.prototype.getSort = <span class="fstat-no" title="function not covered" >function () {</span>
+<span class="cstat-no" title="statement not covered" >        switch (this.sort) {</span>
+            case IBItemsSortEnum.nameaz: <span class="cstat-no" title="statement not covered" >return "nameaz";</span>
+            case IBItemsSortEnum.nameza: <span class="cstat-no" title="statement not covered" >return "nameza";</span>
+            case IBItemsSortEnum.pricemin: <span class="cstat-no" title="statement not covered" >return "pricemin";</span>
+            case IBItemsSortEnum.pricemax: <span class="cstat-no" title="statement not covered" >return "pricemax";</span>
+            default: <span class="cstat-no" title="statement not covered" >return "";</span>
+        }
+    };
+    IBItemsCallOptionsModel.prototype.args = <span class="fstat-no" title="function not covered" >function () {</span>
+<span class="cstat-no" title="statement not covered" >        if (this.product_id)</span>
+<span class="cstat-no" title="statement not covered" >            return "product_id=" + this.product_id;</span>
+<span class="cstat-no" title="statement not covered" >        if (this.kit_id)</span>
+<span class="cstat-no" title="statement not covered" >            return "kit_id=" + this.kit_id;</span>
+<span class="cstat-no" title="statement not covered" >        var args = "";</span>
+<span class="cstat-no" title="statement not covered" >        if (this.subcategory_id)</span>
+<span class="cstat-no" title="statement not covered" >            args += "subcategory_id=" + this.subcategory_id + "&amp;";</span>
+        else <span class="cstat-no" title="statement not covered" >if (this.category_id)</span>
+<span class="cstat-no" title="statement not covered" >            args += "category_id=" + this.category_id + "&amp;";</span>
+<span class="cstat-no" title="statement not covered" >        if (this.page)</span>
+<span class="cstat-no" title="statement not covered" >            args += "page=" + this.page + "&amp;";</span>
+<span class="cstat-no" title="statement not covered" >        if (this.N)</span>
+<span class="cstat-no" title="statement not covered" >            args += "N=" + this.N + "&amp;";</span>
+<span class="cstat-no" title="statement not covered" >        var sort = this.getSort();</span>
+<span class="cstat-no" title="statement not covered" >        if (sort)</span>
+<span class="cstat-no" title="statement not covered" >            args += "sort=" + sort + "&amp;";</span>
+<span class="cstat-no" title="statement not covered" >        return args;</span>
+    };
+    return IBItemsCallOptionsModel;
+}());
+exports.IBItemsCallOptionsModel = IBItemsCallOptionsModel;
+var IBStoreService = (function (_super) {
+    __extends(IBStoreService, _super);
+<span class="fstat-no" title="function not covered" >    function IBStoreService(http, cartService, router) {</span>
+<span class="cstat-no" title="statement not covered" >        var _this = _super.call(this, http) || this;</span>
+<span class="cstat-no" title="statement not covered" >        _this.http = http;</span>
+<span class="cstat-no" title="statement not covered" >        _this.cartService = cartService;</span>
+<span class="cstat-no" title="statement not covered" >        _this.router = router;</span>
+<span class="cstat-no" title="statement not covered" >        _this.storeModel = new store_model_1.IBStore();</span>
+<span class="cstat-no" title="statement not covered" >        _this.observers = new Array();</span>
+<span class="cstat-no" title="statement not covered" >        return _this;</span>
+    }
+    // metodos para observer, NAO SOBREESCREVER
+    IBStoreService.prototype.registerObserver = <span class="fstat-no" title="function not covered" >function (observer) {</span>
+<span class="cstat-no" title="statement not covered" >        this.observers.push(observer);</span>
+    };
+    IBStoreService.prototype.unregisterObserver = <span class="fstat-no" title="function not covered" >function (observer) {</span>
+<span class="cstat-no" title="statement not covered" >        var index = this.observers.indexOf(observer);</span>
+<span class="cstat-no" title="statement not covered" >        if (index &gt;= 0)</span>
+<span class="cstat-no" title="statement not covered" >            this.observers.splice(index, 1);</span>
+    };
+    IBStoreService.prototype.notifyObservers = <span class="fstat-no" title="function not covered" >function (message) {</span>
+<span class="cstat-no" title="statement not covered" >        for (var i = 0; i &lt; this.observers.length; i++) {</span>
+<span class="cstat-no" title="statement not covered" >            this.observers[i].notify(message);</span>
+        }
+    };
+    IBStoreService.prototype.fetchSync = <span class="fstat-no" title="function not covered" >function () {</span>
+<span class="cstat-no" title="statement not covered" >        var fields = 'name,subdomain,cover,mark,loc,address,cep,tel,hours,moneyPayment,checkPayment,onlinePayment,billetPayment,depositPayment,depositInfo,offlinePayment,makeShipping,visible,blocked,min_price_allowed,installmentsrules,description,schedule,window_time,background_color,slogan,background_image,acceptedCards,localities,medias,makeDelivery,makeCollect,is_market,available_deliveries,is_market,pages,google_analytics_key,favicon,fb_pixel_key,whitelabel';</span>
+<span class="cstat-no" title="statement not covered" >        var args = '?fields=' + fields;</span>
+<span class="cstat-no" title="statement not covered" >        var xmlHttp = new XMLHttpRequest();</span>
+<span class="cstat-no" title="statement not covered" >        var url = this.createUrl('/store.json', args);</span>
+<span class="cstat-no" title="statement not covered" >        xmlHttp.open("GET", url, false); </span>// false for synchronous request
+<span class="cstat-no" title="statement not covered" >        xmlHttp.withCredentials = true;</span>
+<span class="cstat-no" title="statement not covered" >        xmlHttp.send(null);</span>
+<span class="cstat-no" title="statement not covered" >        var response = new response_model_1.IBResponse(JSON.parse(xmlHttp.responseText));</span>
+<span class="cstat-no" title="statement not covered" >        if (response.status) {</span>
+<span class="cstat-no" title="statement not covered" >            this.storeModel.setData(response.data);</span>
+<span class="cstat-no" title="statement not covered" >            this.storeId = this.storeModel.id;</span>
+<span class="cstat-no" title="statement not covered" >            return true;</span>
+        }
+        else {
+<span class="cstat-no" title="statement not covered" >            return false;</span>
+        }
+    };
+    IBStoreService.prototype.initializeStore = <span class="fstat-no" title="function not covered" >function () {</span>
+<span class="cstat-no" title="statement not covered" >        this.pullMainMenu();</span>
+<span class="cstat-no" title="statement not covered" >        return this.fetchSync();</span>
+    };
+    IBStoreService.prototype.initializeSubdomainStore = <span class="fstat-no" title="function not covered" >function (subdomain) {</span>
+<span class="cstat-no" title="statement not covered" >        var fields = 'name,subdomain,cover,mark,loc,address,cep,tel,hours,moneyPayment,checkPayment,onlinePayment,billetPayment,offlinePayment,makeShipping,visible,blocked,min_price_allowed,installmentsrules,description,schedule,window_time,background_color,slogan,background_image,acceptedCards,localities,medias,makeDelivery,makeCollect,is_market,available_deliveries,is_market,google_analytics_key,favicon,fb_pixel_key,whitelabel';</span>
+<span class="cstat-no" title="statement not covered" >        var args = '?subdomain=' + subdomain + '&amp;fields=' + fields;</span>
+<span class="cstat-no" title="statement not covered" >        var xmlHttp = new XMLHttpRequest();</span>
+<span class="cstat-no" title="statement not covered" >        var url = "https://instabuy.com.br/apiv3/store.json" + args;</span>
+<span class="cstat-no" title="statement not covered" >        xmlHttp.open("GET", url, false); </span>// false for synchronous request
+<span class="cstat-no" title="statement not covered" >        xmlHttp.withCredentials = true;</span>
+<span class="cstat-no" title="statement not covered" >        xmlHttp.send(null);</span>
+<span class="cstat-no" title="statement not covered" >        var response = new response_model_1.IBResponse(JSON.parse(xmlHttp.responseText));</span>
+<span class="cstat-no" title="statement not covered" >        this.storeModel.setData(response.data);</span>
+<span class="cstat-no" title="statement not covered" >        this.storeId = this.storeModel.id;</span>
+    };
+    // 
+    // CHAMADAS AUTOMATICAS
+    // 
+    IBStoreService.prototype.fetchItems = <span class="fstat-no" title="function not covered" >function (option) {</span>
+<span class="cstat-no" title="statement not covered" >        var endpoint = "/item.json";</span>
+<span class="cstat-no" title="statement not covered" >        var args = option.args();</span>
+<span class="cstat-no" title="statement not covered" >        return this.getRequest(this.createUrl(endpoint, args));</span>
+    };
+    IBStoreService.prototype.pullItems = <span class="fstat-no" title="function not covered" >function (option, callBack) {</span>
+<span class="cstat-no" title="statement not covered" >        var _this = this;</span>
+<span class="cstat-no" title="statement not covered" >        this.fetchItems(option).subscribe(<span class="fstat-no" title="function not covered" >function (responseModel) {</span></span>
+<span class="cstat-no" title="statement not covered" >            var items = [];</span>
+<span class="cstat-no" title="statement not covered" >            var token = general_module_1.tokenGenerator();</span>
+<span class="cstat-no" title="statement not covered" >            if (responseModel.status == response_model_1.IBResponseStatus.success) {</span>
+<span class="cstat-no" title="statement not covered" >                items = util_model_1.IBUtil.getItemsWithResponseDict(responseModel);</span>
+<span class="cstat-no" title="statement not covered" >                _this.cartService.setQtdOnCartOnItemsAndSubscribe(items);</span>
+            }
+<span class="cstat-no" title="statement not covered" >            if (callBack)</span>
+<span class="cstat-no" title="statement not covered" >                callBack(items, responseModel);</span>
+        });
+    };
+    IBStoreService.prototype.pullProduct = <span class="fstat-no" title="function not covered" >function (productId, callBack) {</span>
+<span class="cstat-no" title="statement not covered" >        var option = new IBItemsCallOptionsModel();</span>
+<span class="cstat-no" title="statement not covered" >        option.product_id = productId;</span>
+<span class="cstat-no" title="statement not covered" >        this.pullItems(option, <span class="fstat-no" title="function not covered" >function (items, responseModel) {</span></span>
+<span class="cstat-no" title="statement not covered" >            if (items.length == 0)</span>
+<span class="cstat-no" title="statement not covered" >                items.push(undefined);</span>
+<span class="cstat-no" title="statement not covered" >            if (callBack)</span>
+<span class="cstat-no" title="statement not covered" >                callBack(items[0], responseModel);</span>
+        });
+    };
+    IBStoreService.prototype.pullKit = <span class="fstat-no" title="function not covered" >function (kitId, callBack) {</span>
+<span class="cstat-no" title="statement not covered" >        var option = new IBItemsCallOptionsModel();</span>
+<span class="cstat-no" title="statement not covered" >        option.kit_id = kitId;</span>
+<span class="cstat-no" title="statement not covered" >        this.pullItems(option, <span class="fstat-no" title="function not covered" >function (items, responseModel) {</span></span>
+<span class="cstat-no" title="statement not covered" >            if (items.length == 0)</span>
+<span class="cstat-no" title="statement not covered" >                items.push(undefined);</span>
+<span class="cstat-no" title="statement not covered" >            if (callBack)</span>
+<span class="cstat-no" title="statement not covered" >                callBack(items[0], responseModel);</span>
+        });
+    };
+    IBStoreService.prototype.searchForProduct = <span class="fstat-no" title="function not covered" >function (search, callBack, page, N) {</span>
+<span class="cstat-no" title="statement not covered" >        var _this = this;</span>
+<span class="cstat-no" title="statement not covered" >        if (page === void 0) { <span class="cstat-no" title="statement not covered" >page = 1; </span>}</span>
+<span class="cstat-no" title="statement not covered" >        if (N === void 0) { <span class="cstat-no" title="statement not covered" >N = 25; </span>}</span>
+<span class="cstat-no" title="statement not covered" >        var endpoint = '/search.json';</span>
+<span class="cstat-no" title="statement not covered" >        var args = '?page=' + page + '&amp;N=' + N + '&amp;search=' + search.split(' ').join('+');</span>
+<span class="cstat-no" title="statement not covered" >        this.getRequest(this.createUrl(endpoint, args)).subscribe(<span class="fstat-no" title="function not covered" >function (responseModel) {</span></span>
+<span class="cstat-no" title="statement not covered" >            var items = [];</span>
+<span class="cstat-no" title="statement not covered" >            items = util_model_1.IBUtil.getItemsWithResponseDict(responseModel);</span>
+<span class="cstat-no" title="statement not covered" >            _this.cartService.setQtdOnCartOnItemsAndSubscribe(items);</span>
+<span class="cstat-no" title="statement not covered" >            callBack(items, responseModel);</span>
+        });
+    };
+    /** Retorna observable da requisicao de layout da pagina */
+    IBStoreService.prototype.fetchLayout = <span class="fstat-no" title="function not covered" >function () {</span>
+<span class="cstat-no" title="statement not covered" >        var endpoint = "/layout.json";</span>
+<span class="cstat-no" title="statement not covered" >        return this.getRequest(this.createUrl(endpoint));</span>
+    };
+    /** Faz requisicao de layout e insere o layout na loja */
+    IBStoreService.prototype.pullLayout = <span class="fstat-no" title="function not covered" >function (callBack) {</span>
+<span class="cstat-no" title="statement not covered" >        var _this = this;</span>
+<span class="cstat-no" title="statement not covered" >        this.fetchLayout().subscribe(<span class="fstat-no" title="function not covered" >function (responseModel) {</span></span>
+<span class="cstat-no" title="statement not covered" >            if (responseModel.status == response_model_1.IBResponseStatus.success) {</span>
+<span class="cstat-no" title="statement not covered" >                var layoutModel = new layout_model_1.IBLayout(responseModel.data);</span>
+<span class="cstat-no" title="statement not covered" >                _this.storeModel.layout = layoutModel;</span>
+<span class="cstat-no" title="statement not covered" >                for (var _i = 0, _a = layoutModel.collection; _i &lt; _a.length; _i++) {</span>
+<span class="cstat-no" title="statement not covered" >                    var category = _a[_i];</span>
+<span class="cstat-no" title="statement not covered" >                    _this.cartService.setQtdOnCartOnItemsAndSubscribe(category.items);</span>
+                }
+<span class="cstat-no" title="statement not covered" >                if (layoutModel.promotions)</span>
+<span class="cstat-no" title="statement not covered" >                    _this.cartService.setQtdOnCartOnItemsAndSubscribe(layoutModel.promotions);</span>
+            }
+<span class="cstat-no" title="statement not covered" >            if (callBack)</span>
+<span class="cstat-no" title="statement not covered" >                callBack(responseModel);</span>
+        });
+    };
+    IBStoreService.prototype.fetchMainMenu = <span class="fstat-no" title="function not covered" >function () {</span>
+<span class="cstat-no" title="statement not covered" >        var endpoint = "/menu.json";</span>
+<span class="cstat-no" title="statement not covered" >        var args = "?filter=show_order";</span>
+<span class="cstat-no" title="statement not covered" >        return this.getRequest(this.createUrl(endpoint, args));</span>
+    };
+    IBStoreService.prototype.pullMainMenu = <span class="fstat-no" title="function not covered" >function (callBack) {</span>
+<span class="cstat-no" title="statement not covered" >        var _this = this;</span>
+<span class="cstat-no" title="statement not covered" >        this.fetchMainMenu().subscribe(<span class="fstat-no" title="function not covered" >function (responseModel) {</span></span>
+<span class="cstat-no" title="statement not covered" >            if (responseModel.status == response_model_1.IBResponseStatus.success) {</span>
+<span class="cstat-no" title="statement not covered" >                _this.storeModel.setMainMenu(responseModel.data);</span>
+<span class="cstat-no" title="statement not covered" >                _this.notifyObservers(observable_module_1.NotifyUpdate.onStore);</span>
+            }
+<span class="cstat-no" title="statement not covered" >            if (callBack)</span>
+<span class="cstat-no" title="statement not covered" >                callBack(responseModel);</span>
+        });
+    };
+    IBStoreService.prototype.fetchCategories = <span class="fstat-no" title="function not covered" >function () {</span>
+<span class="cstat-no" title="statement not covered" >        var endpoint = "/category.json";</span>
+<span class="cstat-no" title="statement not covered" >        return this.getRequest(this.createUrl(endpoint, null));</span>
+    };
+    IBStoreService.prototype.pullCategories = <span class="fstat-no" title="function not covered" >function (callBack) {</span>
+<span class="cstat-no" title="statement not covered" >        this.fetchCategories().subscribe(<span class="fstat-no" title="function not covered" >function (responseModel) {</span></span>
+<span class="cstat-no" title="statement not covered" >            if (callBack)</span>
+<span class="cstat-no" title="statement not covered" >                callBack(responseModel);</span>
+        });
+    };
+    IBStoreService.prototype.fetchDeliveryPrice = <span class="fstat-no" title="function not covered" >function (cep) {</span>
+<span class="cstat-no" title="statement not covered" >        var endpoint = "/hasdelivery.json";</span>
+<span class="cstat-no" title="statement not covered" >        var args = "?code=" + cep;</span>
+<span class="cstat-no" title="statement not covered" >        return this.getRequest(this.createUrl(endpoint, args));</span>
+    };
+    IBStoreService.prototype.pullDeliveryPrice = <span class="fstat-no" title="function not covered" >function (cep, callBack) {</span>
+<span class="cstat-no" title="statement not covered" >        this.fetchDeliveryPrice(cep).subscribe(<span class="fstat-no" title="function not covered" >function (responseModel) {</span></span>
+<span class="cstat-no" title="statement not covered" >            if (callBack)</span>
+<span class="cstat-no" title="statement not covered" >                callBack(responseModel);</span>
+        });
+    };
+    IBStoreService.prototype.fetchCoupon = <span class="fstat-no" title="function not covered" >function (couponCode) {</span>
+<span class="cstat-no" title="statement not covered" >        var endpoint = "/coupon.json";</span>
+<span class="cstat-no" title="statement not covered" >        var args = "?code=" + couponCode;</span>
+<span class="cstat-no" title="statement not covered" >        return this.getRequest(this.createUrl(endpoint, args));</span>
+    };
+    IBStoreService.prototype.validateCoupon = <span class="fstat-no" title="function not covered" >function (couponCode, callBack) {</span>
+<span class="cstat-no" title="statement not covered" >        this.fetchCoupon(couponCode).subscribe(<span class="fstat-no" title="function not covered" >function (responseModel) {</span></span>
+<span class="cstat-no" title="statement not covered" >            var couponModel;</span>
+<span class="cstat-no" title="statement not covered" >            if (responseModel.status == response_model_1.IBResponseStatus.success) {</span>
+<span class="cstat-no" title="statement not covered" >                var responseData = void 0;</span>
+<span class="cstat-no" title="statement not covered" >                responseData = responseModel.data;</span>
+<span class="cstat-no" title="statement not covered" >                if (responseData.length == undefined) {</span>
+<span class="cstat-no" title="statement not covered" >                    couponModel = new coupon_model_1.IBCoupon(responseData);</span>
+                }
+                else {
+<span class="cstat-no" title="statement not covered" >                    couponModel = undefined;</span>
+                }
+            }
+<span class="cstat-no" title="statement not covered" >            if (callBack)</span>
+<span class="cstat-no" title="statement not covered" >                callBack(couponModel, responseModel);</span>
+        });
+    };
+    IBStoreService.prototype.registerCardHash = <span class="fstat-no" title="function not covered" >function (number, name, expirationMonth, expirationYear, cvv, successCallBack, errorCallBack) {</span>
+<span class="cstat-no" title="statement not covered" >        var hashKey = "ek_live_xXTPAO2M7kUdudRac5TVkULZlcmpmV";</span>
+<span class="cstat-no" title="statement not covered" >        PagarMe.encryption_key = hashKey;</span>
+<span class="cstat-no" title="statement not covered" >        var PMCard = new PagarMe.creditCard();</span>
+<span class="cstat-no" title="statement not covered" >        PMCard.cardHolderName = name;</span>
+<span class="cstat-no" title="statement not covered" >        PMCard.cardExpirationMonth = expirationMonth;</span>
+<span class="cstat-no" title="statement not covered" >        PMCard.cardExpirationYear = expirationYear;</span>
+<span class="cstat-no" title="statement not covered" >        PMCard.cardNumber = number;</span>
+<span class="cstat-no" title="statement not covered" >        PMCard.cardCVV = cvv;</span>
+<span class="cstat-no" title="statement not covered" >        var fieldErrors = PMCard.fieldErrors();</span>
+<span class="cstat-no" title="statement not covered" >        var hasErrors = false;</span>
+<span class="cstat-no" title="statement not covered" >        for (var field in fieldErrors) {</span>
+<span class="cstat-no" title="statement not covered" >            hasErrors = true;</span>
+<span class="cstat-no" title="statement not covered" >            break;</span>
+        }
+<span class="cstat-no" title="statement not covered" >        if (hasErrors) {</span>
+            // realiza o tratamento de erros
+<span class="cstat-no" title="statement not covered" >            errorCallBack(fieldErrors);</span>
+        }
+        else {
+            // se não há erros, gera o card_hash...
+<span class="cstat-no" title="statement not covered" >            PMCard.generateHash(<span class="fstat-no" title="function not covered" >function (cardHash) {</span></span>
+<span class="cstat-no" title="statement not covered" >                successCallBack(cardHash);</span>
+            });
+        }
+    };
+    IBStoreService.prototype.placeOrder = <span class="fstat-no" title="function not covered" >function (orderObject, callBack) {</span>
+<span class="cstat-no" title="statement not covered" >        var endpoint = '/buy.json';</span>
+<span class="cstat-no" title="statement not covered" >        this.postXWWFormUrlEnconded(this.createUrl(endpoint), orderObject).subscribe(<span class="fstat-no" title="function not covered" >function (responseModel) {</span></span>
+<span class="cstat-no" title="statement not covered" >            if (callBack)</span>
+<span class="cstat-no" title="statement not covered" >                callBack(responseModel);</span>
+        });
+    };
+    IBStoreService.prototype.sendMessage = <span class="fstat-no" title="function not covered" >function (name, tel, email, message, callBack) {</span>
+<span class="cstat-no" title="statement not covered" >        var endpoint = '/message.json';</span>
+<span class="cstat-no" title="statement not covered" >        if (tel &amp;&amp; tel != '') {</span>
+<span class="cstat-no" title="statement not covered" >            this.postRequest(this.createUrl(endpoint), { name: name, phone: tel, email: email, message: message, device: 'web' }).subscribe(<span class="fstat-no" title="function not covered" >function (responseModel) {</span></span>
+<span class="cstat-no" title="statement not covered" >                if (callBack)</span>
+<span class="cstat-no" title="statement not covered" >                    callBack(responseModel);</span>
+            });
+        }
+        else {
+<span class="cstat-no" title="statement not covered" >            this.postRequest(this.createUrl(endpoint), { name: name, email: email, message: message, device: 'web' }).subscribe(<span class="fstat-no" title="function not covered" >function (responseModel) {</span></span>
+<span class="cstat-no" title="statement not covered" >                if (callBack)</span>
+<span class="cstat-no" title="statement not covered" >                    callBack(responseModel);</span>
+            });
+        }
+    };
+    IBStoreService.prototype.subscribeNewsletter = <span class="fstat-no" title="function not covered" >function (email, callBack) {</span>
+<span class="cstat-no" title="statement not covered" >        var endpoint = '/newsletter.json';</span>
+<span class="cstat-no" title="statement not covered" >        this.postRequest(this.createUrl(endpoint), { email: email, device: 'web' }).subscribe(<span class="fstat-no" title="function not covered" >function (responseModel) {</span></span>
+<span class="cstat-no" title="statement not covered" >            if (callBack)</span>
+<span class="cstat-no" title="statement not covered" >                callBack(responseModel);</span>
+        });
+    };
+    IBStoreService.prototype.getStoreId = <span class="fstat-no" title="function not covered" >function () {</span>
+<span class="cstat-no" title="statement not covered" >        return this.storeId;</span>
+    };
+    IBStoreService.prototype.fetchLists = <span class="fstat-no" title="function not covered" >function (list_id) {</span>
+<span class="cstat-no" title="statement not covered" >        var endpoint = "/list.json";</span>
+<span class="cstat-no" title="statement not covered" >        var args;</span>
+<span class="cstat-no" title="statement not covered" >        if (list_id) {</span>
+<span class="cstat-no" title="statement not covered" >            args = '?list_id=' + list_id;</span>
+        }
+<span class="cstat-no" title="statement not covered" >        return this.getRequest(this.createUrl(endpoint, args));</span>
+    };
+    IBStoreService.prototype.pullLists = <span class="fstat-no" title="function not covered" >function (list_id, callBack) {</span>
+<span class="cstat-no" title="statement not covered" >        this.fetchLists(list_id).subscribe(<span class="fstat-no" title="function not covered" >function (responseModel) {</span></span>
+<span class="cstat-no" title="statement not covered" >            var lists = [];</span>
+<span class="cstat-no" title="statement not covered" >            if (responseModel.status == response_model_1.IBResponseStatus.success) {</span>
+<span class="cstat-no" title="statement not covered" >                for (var i = 0; i &lt; responseModel.data.length; i++) {</span>
+<span class="cstat-no" title="statement not covered" >                    lists.push(new list_model_1.IBProductsList(responseModel.data[i]));</span>
+                }
+            }
+<span class="cstat-no" title="statement not covered" >            if (callBack)</span>
+<span class="cstat-no" title="statement not covered" >                callBack(lists, responseModel);</span>
+        });
+    };
+    return IBStoreService;
+}(request_service_1.IBRequestService));
+IBStoreService = __decorate([
+    core_1.Injectable(),
+    __metadata("design:paramtypes", [http_1.Http, cart_service_1.IBCartService, router_1.Router])
+], IBStoreService);
+exports.IBStoreService = IBStoreService;
+//# sourceMappingURL=store.service.js.map</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Tue Apr 17 2018 16:56:26 GMT-0300 (-03)
+</div>
+</div>
+<script src="../../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../../sorter.js"></script>
+</body>
+</html>

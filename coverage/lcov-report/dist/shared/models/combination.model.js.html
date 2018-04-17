@@ -1,0 +1,650 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for dist/shared/models/combination.model.js</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../../prettify.css" />
+    <link rel="stylesheet" href="../../../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../../../index.html">all files</a> / <a href="index.html">dist/shared/models/</a> combination.model.js
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">27.14% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>38/140</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">6.85% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>5/73</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">18.18% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>6/33</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">27.01% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>37/137</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line low'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138
+139
+140
+141
+142
+143
+144
+145
+146
+147
+148
+149
+150
+151
+152
+153
+154
+155
+156
+157
+158
+159
+160
+161
+162
+163
+164
+165
+166
+167
+168
+169
+170
+171
+172
+173
+174
+175
+176
+177
+178
+179
+180
+181
+182
+183
+184
+185
+186
+187
+188
+189
+190
+191
+192
+193
+194
+195
+196</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">"use strict";
+var __extends = (this &amp;&amp; this.__extends) || (function () {
+    var extendStatics = Object.setPrototypeOf ||
+        (<span class="branch-1 cbranch-no" title="branch not covered" >{ __proto__: [] } instanceof Array </span>&amp;&amp; <span class="fstat-no" title="function not covered" ><span class="branch-2 cbranch-no" title="branch not covered" >function (d, b) {</span> <span class="cstat-no" title="statement not covered" >d.__proto__ = b; </span>})</span> ||
+<span class="fstat-no" title="function not covered" ><span class="branch-3 cbranch-no" title="branch not covered" >        function (d, b) {</span> <span class="cstat-no" title="statement not covered" >for (var p in b) <span class="cstat-no" title="statement not covered" >if (b.hasOwnProperty(p)) <span class="cstat-no" title="statement not covered" >d[p] = b[p]; </span></span></span>};</span>
+    return function (d, b) {
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? <span class="branch-0 cbranch-no" title="branch not covered" >Object.create(b) </span>: (__.prototype = b.prototype, new __());
+    };
+})();
+var object_model_1 = require("./object.model");
+var IBCombination = (function (_super) {
+    __extends(IBCombination, _super);
+<span class="fstat-no" title="function not covered" >    function IBCombination(data) {</span>
+<span class="cstat-no" title="statement not covered" >        var _this = _super.call(this) || this;</span>
+<span class="cstat-no" title="statement not covered" >        _this.quantity = 1;</span>
+<span class="cstat-no" title="statement not covered" >        _this.setData(data);</span>
+<span class="cstat-no" title="statement not covered" >        return _this;</span>
+    }
+    IBCombination.prototype.setData = <span class="fstat-no" title="function not covered" >function (data) {</span>
+<span class="cstat-no" title="statement not covered" >        if (data &amp;&amp; Object.keys(data).length &gt; 0) {</span>
+<span class="cstat-no" title="statement not covered" >            _super.prototype.setData.call(this, data);</span>
+<span class="cstat-no" title="statement not covered" >            this.bundles = [];</span>
+<span class="cstat-no" title="statement not covered" >            var length_1 = data['bundles'].length;</span>
+<span class="cstat-no" title="statement not covered" >            if (data['bundles'] &amp;&amp; length_1 &gt; 0) {</span>
+<span class="cstat-no" title="statement not covered" >                for (var i = 0; i &lt; length_1; i++) {</span>
+<span class="cstat-no" title="statement not covered" >                    this.bundles.push(new IBCombinationBundle(data['bundles'][i]));</span>
+                }
+            }
+        }
+    };
+    IBCombination.prototype.getPrice = <span class="fstat-no" title="function not covered" >function () {</span>
+<span class="cstat-no" title="statement not covered" >        var total = this.price;</span>
+<span class="cstat-no" title="statement not covered" >        for (var _i = 0, _a = this.bundles; _i &lt; _a.length; _i++) {</span>
+<span class="cstat-no" title="statement not covered" >            var bundle = _a[_i];</span>
+<span class="cstat-no" title="statement not covered" >            for (var _b = 0, _c = bundle.ingredients; _b &lt; _c.length; _b++) {</span>
+<span class="cstat-no" title="statement not covered" >                var ingredient = _c[_b];</span>
+<span class="cstat-no" title="statement not covered" >                total = total + (ingredient.price * ingredient.quantity);</span>
+            }
+        }
+<span class="cstat-no" title="statement not covered" >        return total;</span>
+    };
+    IBCombination.prototype.getTotalPrice = <span class="fstat-no" title="function not covered" >function () {</span>
+<span class="cstat-no" title="statement not covered" >        return this.getPrice() * this.quantity;</span>
+    };
+    IBCombination.prototype.getBundlesForCartRequest = <span class="fstat-no" title="function not covered" >function () {</span>
+<span class="cstat-no" title="statement not covered" >        var mArray = [];</span>
+<span class="cstat-no" title="statement not covered" >        this.bundles.forEach(<span class="fstat-no" title="function not covered" >function (bundle) {</span></span>
+<span class="cstat-no" title="statement not covered" >            var dict = { id: bundle.id };</span>
+<span class="cstat-no" title="statement not covered" >            var mArrayIng = [];</span>
+<span class="cstat-no" title="statement not covered" >            bundle.ingredients.forEach(<span class="fstat-no" title="function not covered" >function (ingredient) {</span></span>
+<span class="cstat-no" title="statement not covered" >                if (ingredient.quantity &gt; 0) {</span>
+<span class="cstat-no" title="statement not covered" >                    mArrayIng.push({</span>
+                        id: ingredient.id,
+                        quantity: ingredient.quantity
+                    });
+                }
+            });
+<span class="cstat-no" title="statement not covered" >            dict['ingredients'] = mArrayIng;</span>
+<span class="cstat-no" title="statement not covered" >            if (mArrayIng.length &amp;&amp; mArrayIng.length != 0)</span>
+<span class="cstat-no" title="statement not covered" >                mArray.push(dict);</span>
+        });
+<span class="cstat-no" title="statement not covered" >        return mArray;</span>
+    };
+    IBCombination.prototype.getIngredientsText = <span class="fstat-no" title="function not covered" >function () {</span>
+<span class="cstat-no" title="statement not covered" >        var mString = "";</span>
+<span class="cstat-no" title="statement not covered" >        this.bundles.forEach(<span class="fstat-no" title="function not covered" >function (bundle) {</span></span>
+<span class="cstat-no" title="statement not covered" >            mString = mString + bundle.textForIngredients();</span>
+        });
+<span class="cstat-no" title="statement not covered" >        return mString;</span>
+    };
+    IBCombination.prototype.getFinishBuyJSON = <span class="fstat-no" title="function not covered" >function () {</span>
+<span class="cstat-no" title="statement not covered" >        return {</span>
+            id: this.id,
+            quantity: this.quantity,
+            price: this.getPrice()
+        };
+    };
+    IBCombination.prototype.getVisiblePriceString = <span class="fstat-no" title="function not covered" >function () {</span>
+<span class="cstat-no" title="statement not covered" >        if (this.min_price == this.price)</span>
+<span class="cstat-no" title="statement not covered" >            return 'R$ ' + this.price.toFixed(2).replace('.', ',');</span>
+        else
+<span class="cstat-no" title="statement not covered" >            return 'A partir de R$ ' + this.min_price.toFixed(2).replace('.', ',');</span>
+    };
+    return IBCombination;
+}(object_model_1.IBObject));
+exports.IBCombination = IBCombination;
+var IBCombinationBundle = (function (_super) {
+    __extends(IBCombinationBundle, _super);
+<span class="fstat-no" title="function not covered" >    function IBCombinationBundle(data) {</span>
+<span class="cstat-no" title="statement not covered" >        var _this = _super.call(this) || this;</span>
+<span class="cstat-no" title="statement not covered" >        _this.setData(data);</span>
+<span class="cstat-no" title="statement not covered" >        return _this;</span>
+    }
+    IBCombinationBundle.prototype.hasIngredientSelected = <span class="fstat-no" title="function not covered" >function () {</span>
+<span class="cstat-no" title="statement not covered" >        for (var _i = 0, _a = this.ingredients; _i &lt; _a.length; _i++) {</span>
+<span class="cstat-no" title="statement not covered" >            var ing = _a[_i];</span>
+<span class="cstat-no" title="statement not covered" >            if (ing.quantity &amp;&amp; ing.quantity &gt; 0)</span>
+<span class="cstat-no" title="statement not covered" >                return true;</span>
+        }
+<span class="cstat-no" title="statement not covered" >        return false;</span>
+    };
+    IBCombinationBundle.prototype.setData = <span class="fstat-no" title="function not covered" >function (data) {</span>
+<span class="cstat-no" title="statement not covered" >        if (data &amp;&amp; Object.keys(data).length &gt; 0) {</span>
+<span class="cstat-no" title="statement not covered" >            _super.prototype.setData.call(this, data);</span>
+<span class="cstat-no" title="statement not covered" >            this.ingredients = [];</span>
+<span class="cstat-no" title="statement not covered" >            var length_2 = data['ingredients'].length;</span>
+<span class="cstat-no" title="statement not covered" >            if (data['ingredients'] &amp;&amp; length_2 &gt; 0) {</span>
+<span class="cstat-no" title="statement not covered" >                for (var i = 0; i &lt; length_2; i++) {</span>
+<span class="cstat-no" title="statement not covered" >                    this.ingredients.push(new IBCombinationBundleIngredient(data['ingredients'][i]));</span>
+                }
+            }
+        }
+    };
+    IBCombinationBundle.prototype.numberOfIngredients = <span class="fstat-no" title="function not covered" >function () {</span>
+<span class="cstat-no" title="statement not covered" >        var count = 0;</span>
+<span class="cstat-no" title="statement not covered" >        this.ingredients.forEach(<span class="fstat-no" title="function not covered" >function (ingr) {</span></span>
+<span class="cstat-no" title="statement not covered" >            if (ingr.quantity &gt; 0) {</span>
+<span class="cstat-no" title="statement not covered" >                count++;</span>
+            }
+        });
+<span class="cstat-no" title="statement not covered" >        return count;</span>
+    };
+    IBCombinationBundle.prototype.numberOfItens = <span class="fstat-no" title="function not covered" >function () {</span>
+<span class="cstat-no" title="statement not covered" >        var count = 0;</span>
+<span class="cstat-no" title="statement not covered" >        this.ingredients.forEach(<span class="fstat-no" title="function not covered" >function (ingr) {</span></span>
+<span class="cstat-no" title="statement not covered" >            if (ingr.quantity &gt; 0) {</span>
+<span class="cstat-no" title="statement not covered" >                count += ingr.quantity;</span>
+            }
+        });
+<span class="cstat-no" title="statement not covered" >        return count;</span>
+    };
+    IBCombinationBundle.prototype.textForIngredientAtPosition = <span class="fstat-no" title="function not covered" >function (index) {</span>
+<span class="cstat-no" title="statement not covered" >        var count = 0;</span>
+<span class="cstat-no" title="statement not covered" >        this.ingredients.forEach(<span class="fstat-no" title="function not covered" >function (ingredient) {</span></span>
+<span class="cstat-no" title="statement not covered" >            if (ingredient.quantity &gt; 0) {</span>
+<span class="cstat-no" title="statement not covered" >                if (index == count &amp;&amp; ingredient.quantity == 1)</span>
+<span class="cstat-no" title="statement not covered" >                    return ingredient.name;</span>
+                else <span class="cstat-no" title="statement not covered" >if (index == count &amp;&amp; ingredient.quantity &gt; 1)</span>
+<span class="cstat-no" title="statement not covered" >                    return ingredient.quantity + ' ' + ingredient.name;</span>
+                else
+<span class="cstat-no" title="statement not covered" >                    count++;</span>
+            }
+        });
+<span class="cstat-no" title="statement not covered" >        return "";</span>
+    };
+    IBCombinationBundle.prototype.textForIngredients = <span class="fstat-no" title="function not covered" >function () {</span>
+<span class="cstat-no" title="statement not covered" >        var mString = '';</span>
+<span class="cstat-no" title="statement not covered" >        this.ingredients.forEach(<span class="fstat-no" title="function not covered" >function (ingredient) {</span></span>
+<span class="cstat-no" title="statement not covered" >            if (ingredient.quantity &gt; 0) {</span>
+<span class="cstat-no" title="statement not covered" >                if (mString != '')</span>
+<span class="cstat-no" title="statement not covered" >                    mString = mString + ', ';</span>
+<span class="cstat-no" title="statement not covered" >                if (ingredient.quantity == 1)</span>
+<span class="cstat-no" title="statement not covered" >                    mString = mString + ingredient.name;</span>
+                else
+<span class="cstat-no" title="statement not covered" >                    return ingredient.quantity + ' ' + ingredient.name;</span>
+            }
+        });
+<span class="cstat-no" title="statement not covered" >        if (mString != '')</span>
+<span class="cstat-no" title="statement not covered" >            mString = mString + '. ';</span>
+<span class="cstat-no" title="statement not covered" >        return mString;</span>
+    };
+    IBCombinationBundle.prototype.setIngredientAtIndexSelected = <span class="fstat-no" title="function not covered" >function (index) {</span>
+<span class="cstat-no" title="statement not covered" >        var length = this.ingredients.length;</span>
+<span class="cstat-no" title="statement not covered" >        for (var i = 0; i &lt; length; i++) {</span>
+<span class="cstat-no" title="statement not covered" >            var ingredient = this.ingredients[i];</span>
+<span class="cstat-no" title="statement not covered" >            if (i == index)</span>
+<span class="cstat-no" title="statement not covered" >                ingredient.quantity = 1;</span>
+            else
+<span class="cstat-no" title="statement not covered" >                ingredient.quantity = 0;</span>
+        }
+    };
+    return IBCombinationBundle;
+}(object_model_1.IBObject));
+exports.IBCombinationBundle = IBCombinationBundle;
+var IBCombinationBundleIngredient = (function (_super) {
+    __extends(IBCombinationBundleIngredient, _super);
+<span class="fstat-no" title="function not covered" >    function IBCombinationBundleIngredient(data) {</span>
+<span class="cstat-no" title="statement not covered" >        var _this = _super.call(this) || this;</span>
+<span class="cstat-no" title="statement not covered" >        _this.quantity = 0; </span>//qtd selected
+<span class="cstat-no" title="statement not covered" >        _this.setData(data);</span>
+<span class="cstat-no" title="statement not covered" >        return _this;</span>
+    }
+    IBCombinationBundleIngredient.prototype.textForIngredient = <span class="fstat-no" title="function not covered" >function () {</span>
+<span class="cstat-no" title="statement not covered" >        if (this.quantity == 1)</span>
+<span class="cstat-no" title="statement not covered" >            return this.name;</span>
+        else <span class="cstat-no" title="statement not covered" >if (this.quantity &gt; 1)</span>
+<span class="cstat-no" title="statement not covered" >            return this.quantity + 'x ' + this.name;</span>
+        else
+<span class="cstat-no" title="statement not covered" >            return "";</span>
+    };
+    return IBCombinationBundleIngredient;
+}(object_model_1.IBObject));
+exports.IBCombinationBundleIngredient = IBCombinationBundleIngredient;
+//# sourceMappingURL=combination.model.js.map</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Tue Apr 17 2018 16:56:26 GMT-0300 (-03)
+</div>
+</div>
+<script src="../../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../../sorter.js"></script>
+</body>
+</html>

@@ -1,0 +1,845 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for dist/shared/models/store.model.js</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../../prettify.css" />
+    <link rel="stylesheet" href="../../../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../../../index.html">all files</a> / <a href="index.html">dist/shared/models/</a> store.model.js
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">38.1% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>72/189</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">8.75% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>7/80</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">35.29% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>12/34</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">38.17% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>71/186</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line low'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138
+139
+140
+141
+142
+143
+144
+145
+146
+147
+148
+149
+150
+151
+152
+153
+154
+155
+156
+157
+158
+159
+160
+161
+162
+163
+164
+165
+166
+167
+168
+169
+170
+171
+172
+173
+174
+175
+176
+177
+178
+179
+180
+181
+182
+183
+184
+185
+186
+187
+188
+189
+190
+191
+192
+193
+194
+195
+196
+197
+198
+199
+200
+201
+202
+203
+204
+205
+206
+207
+208
+209
+210
+211
+212
+213
+214
+215
+216
+217
+218
+219
+220
+221
+222
+223
+224
+225
+226
+227
+228
+229
+230
+231
+232
+233
+234
+235
+236
+237
+238
+239
+240
+241
+242
+243
+244
+245
+246
+247
+248
+249
+250
+251
+252
+253
+254
+255
+256
+257
+258
+259
+260
+261</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">8×</span>
+<span class="cline-any cline-yes">8×</span>
+<span class="cline-any cline-yes">8×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">"use strict";
+var __extends = (this &amp;&amp; this.__extends) || (function () {
+    var extendStatics = Object.setPrototypeOf ||
+        (<span class="branch-1 cbranch-no" title="branch not covered" >{ __proto__: [] } instanceof Array </span>&amp;&amp; <span class="fstat-no" title="function not covered" ><span class="branch-2 cbranch-no" title="branch not covered" >function (d, b) {</span> <span class="cstat-no" title="statement not covered" >d.__proto__ = b; </span>})</span> ||
+<span class="fstat-no" title="function not covered" ><span class="branch-3 cbranch-no" title="branch not covered" >        function (d, b) {</span> <span class="cstat-no" title="statement not covered" >for (var p in b) <span class="cstat-no" title="statement not covered" >if (b.hasOwnProperty(p)) <span class="cstat-no" title="statement not covered" >d[p] = b[p]; </span></span></span>};</span>
+    return function (d, b) {
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? <span class="branch-0 cbranch-no" title="branch not covered" >Object.create(b) </span>: (__.prototype = b.prototype, new __());
+    };
+})();
+var object_model_1 = require("./object.model");
+var layout_model_1 = require("./layout.model");
+var general_module_1 = require("../modules/general.module");
+var dateutil_model_1 = require("./dateutil.model");
+var IBStoreHours = (function (_super) {
+    __extends(IBStoreHours, _super);
+<span class="fstat-no" title="function not covered" >    function IBStoreHours() {</span>
+<span class="cstat-no" title="statement not covered" >        return _super !== null &amp;&amp; _super.apply(this, arguments) || this;</span>
+    }
+    IBStoreHours.prototype.setData = <span class="fstat-no" title="function not covered" >function (data) {</span>
+<span class="cstat-no" title="statement not covered" >        var element;</span>
+        // issue: https://github.com/Microsoft/TypeScript/pull/14195
+        // for..in has to be placed like Object
+        // TODO: fix
+<span class="cstat-no" title="statement not covered" >        for (var key in Object(data)) {</span>
+<span class="cstat-no" title="statement not covered" >            element = data[key];</span>
+<span class="cstat-no" title="statement not covered" >            if (element['24h']) {</span>
+<span class="cstat-no" title="statement not covered" >                element['allDay'] = element['24h'];</span>
+<span class="cstat-no" title="statement not covered" >                delete element['24h'];</span>
+            }
+<span class="cstat-no" title="statement not covered" >            this[key] = element;</span>
+        }
+    };
+    return IBStoreHours;
+}(object_model_1.IBObject));
+exports.IBStoreHours = IBStoreHours;
+var IBDayEnum;
+(function (IBDayEnum) {
+    IBDayEnum[IBDayEnum["sunday"] = 0] = "sunday";
+    IBDayEnum[IBDayEnum["monday"] = 1] = "monday";
+    IBDayEnum[IBDayEnum["tuesday"] = 2] = "tuesday";
+    IBDayEnum[IBDayEnum["wednesday"] = 3] = "wednesday";
+    IBDayEnum[IBDayEnum["thursday"] = 4] = "thursday";
+    IBDayEnum[IBDayEnum["friday"] = 5] = "friday";
+    IBDayEnum[IBDayEnum["saturday"] = 6] = "saturday"; // sabado
+})(IBDayEnum = exports.IBDayEnum || (exports.IBDayEnum = {}));
+var IBScheduleBand = (function (_super) {
+    __extends(IBScheduleBand, _super);
+<span class="fstat-no" title="function not covered" >    function IBScheduleBand() {</span>
+<span class="cstat-no" title="statement not covered" >        return _super !== null &amp;&amp; _super.apply(this, arguments) || this;</span>
+    }
+    IBScheduleBand.prototype.setData = <span class="fstat-no" title="function not covered" >function (data) {</span>
+<span class="cstat-no" title="statement not covered" >        _super.prototype.setData.call(this, data);</span>
+<span class="cstat-no" title="statement not covered" >        if (this.delivery_date)</span>
+<span class="cstat-no" title="statement not covered" >            this.delivery_date = dateutil_model_1.IBDateUtil.getDate(data['delivery_date']);</span>
+    };
+    return IBScheduleBand;
+}(object_model_1.IBObject));
+exports.IBScheduleBand = IBScheduleBand;
+var IBScheduleDay = (function (_super) {
+    __extends(IBScheduleDay, _super);
+<span class="fstat-no" title="function not covered" >    function IBScheduleDay() {</span>
+<span class="cstat-no" title="statement not covered" >        return _super !== null &amp;&amp; _super.apply(this, arguments) || this;</span>
+    }
+    IBScheduleDay.prototype.setData = <span class="fstat-no" title="function not covered" >function (data) {</span>
+<span class="cstat-no" title="statement not covered" >        _super.prototype.setData.call(this, data);</span>
+<span class="cstat-no" title="statement not covered" >        this.bands = [];</span>
+<span class="cstat-no" title="statement not covered" >        for (var i = 0; i &lt; data['bands'].length; i++) {</span>
+<span class="cstat-no" title="statement not covered" >            this.bands.push(new IBScheduleBand(data['bands'][i]));</span>
+        }
+    };
+    return IBScheduleDay;
+}(object_model_1.IBObject));
+exports.IBScheduleDay = IBScheduleDay;
+var IBStoreLocality = (function (_super) {
+    __extends(IBStoreLocality, _super);
+<span class="fstat-no" title="function not covered" >    function IBStoreLocality() {</span>
+<span class="cstat-no" title="statement not covered" >        return _super !== null &amp;&amp; _super.apply(this, arguments) || this;</span>
+    }
+    return IBStoreLocality;
+}(object_model_1.IBObject));
+exports.IBStoreLocality = IBStoreLocality;
+var IBStoreCard = (function (_super) {
+    __extends(IBStoreCard, _super);
+<span class="fstat-no" title="function not covered" >    function IBStoreCard() {</span>
+<span class="cstat-no" title="statement not covered" >        return _super !== null &amp;&amp; _super.apply(this, arguments) || this;</span>
+    }
+    return IBStoreCard;
+}(object_model_1.IBObject));
+exports.IBStoreCard = IBStoreCard;
+var IBInstallment = (function (_super) {
+    __extends(IBInstallment, _super);
+<span class="fstat-no" title="function not covered" >    function IBInstallment() {</span>
+<span class="cstat-no" title="statement not covered" >        return _super !== null &amp;&amp; _super.apply(this, arguments) || this;</span>
+    }
+    IBInstallment.prototype.isValid = <span class="fstat-no" title="function not covered" >function (price) {</span>
+<span class="cstat-no" title="statement not covered" >        if (price &gt;= this.min_price)</span>
+<span class="cstat-no" title="statement not covered" >            return true;</span>
+        else
+<span class="cstat-no" title="statement not covered" >            return false;</span>
+    };
+    IBInstallment.prototype.getFinalPriceWithInstallment = <span class="fstat-no" title="function not covered" >function (price) {</span>
+<span class="cstat-no" title="statement not covered" >        return (price * Math.pow(1 + (this.interest) / 100, Number(this.installments.substring(0, 1))));</span>
+    };
+    IBInstallment.prototype.getFinalInstallment = <span class="fstat-no" title="function not covered" >function (price) {</span>
+<span class="cstat-no" title="statement not covered" >        return this.getFinalPriceWithInstallment(price) / Number(this.installments.substring(0, 1));</span>
+    };
+    IBInstallment.prototype.getFinalInstallmentString = <span class="fstat-no" title="function not covered" >function (price) {</span>
+<span class="cstat-no" title="statement not covered" >        var installment_string = '';</span>
+<span class="cstat-no" title="statement not covered" >        installment_string += this.installments;</span>
+<span class="cstat-no" title="statement not covered" >        if (this.interest == 0)</span>
+<span class="cstat-no" title="statement not covered" >            installment_string += ' sem juros de ';</span>
+        else
+<span class="cstat-no" title="statement not covered" >            installment_string += ' com juros (' + this.interest + '% ao mês) de ';</span>
+<span class="cstat-no" title="statement not covered" >        installment_string += 'R$ ' + general_module_1.priceToString(this.getFinalInstallment(price));</span>
+<span class="cstat-no" title="statement not covered" >        return installment_string;</span>
+    };
+    return IBInstallment;
+}(object_model_1.IBObject));
+exports.IBInstallment = IBInstallment;
+var IBPage = (function (_super) {
+    __extends(IBPage, _super);
+<span class="fstat-no" title="function not covered" >    function IBPage() {</span>
+<span class="cstat-no" title="statement not covered" >        return _super !== null &amp;&amp; _super.apply(this, arguments) || this;</span>
+    }
+    return IBPage;
+}(object_model_1.IBObject));
+exports.IBPage = IBPage;
+var IBStore = (function (_super) {
+    __extends(IBStore, _super);
+<span class="fstat-no" title="function not covered" >    function IBStore(data) {</span>
+<span class="cstat-no" title="statement not covered" >        var _this = _super.call(this) || this;</span>
+<span class="cstat-no" title="statement not covered" >        _this.layout = new layout_model_1.IBLayout([]);</span>
+<span class="cstat-no" title="statement not covered" >        _this.menu = [];</span>
+<span class="cstat-no" title="statement not covered" >        _this.loc = [];</span>
+<span class="cstat-no" title="statement not covered" >        _this.localities = [];</span>
+<span class="cstat-no" title="statement not covered" >        _this.available_deliveries = [];</span>
+<span class="cstat-no" title="statement not covered" >        _this.acceptedCards = [];</span>
+<span class="cstat-no" title="statement not covered" >        _this.creditList = [];</span>
+<span class="cstat-no" title="statement not covered" >        _this.debitList = [];</span>
+<span class="cstat-no" title="statement not covered" >        _this.valeList = [];</span>
+<span class="cstat-no" title="statement not covered" >        _this.installmentsrules = [];</span>
+<span class="cstat-no" title="statement not covered" >        if (data)</span>
+<span class="cstat-no" title="statement not covered" >            _this.setData(data);</span>
+<span class="cstat-no" title="statement not covered" >        return _this;</span>
+    }
+    IBStore.prototype.setData = <span class="fstat-no" title="function not covered" >function (data) {</span>
+<span class="cstat-no" title="statement not covered" >        _super.prototype.setData.call(this, data);</span>
+<span class="cstat-no" title="statement not covered" >        if (data['localities']) {</span>
+<span class="cstat-no" title="statement not covered" >            this.localities = [];</span>
+<span class="cstat-no" title="statement not covered" >            for (var i = 0; i &lt; data['localities'].length; i++) {</span>
+<span class="cstat-no" title="statement not covered" >                this.localities.push(new IBStoreLocality(data['localities'][i]));</span>
+            }
+        }
+<span class="cstat-no" title="statement not covered" >        if (data['available_deliveries']) {</span>
+<span class="cstat-no" title="statement not covered" >            this.available_deliveries = [];</span>
+<span class="cstat-no" title="statement not covered" >            for (var i = 0; i &lt; data['available_deliveries'].length; i++) {</span>
+<span class="cstat-no" title="statement not covered" >                this.available_deliveries.push(new IBScheduleDay(data['available_deliveries'][i]));</span>
+            }
+        }
+<span class="cstat-no" title="statement not covered" >        if (data['acceptedCards']) {</span>
+<span class="cstat-no" title="statement not covered" >            this.acceptedCards = [];</span>
+<span class="cstat-no" title="statement not covered" >            for (var i = 0; i &lt; data['acceptedCards'].length; i++) {</span>
+<span class="cstat-no" title="statement not covered" >                this.acceptedCards.push(new IBStoreCard(data['acceptedCards'][i]));</span>
+            }
+<span class="cstat-no" title="statement not covered" >            var auxStoreCard = void 0;</span>
+<span class="cstat-no" title="statement not covered" >            this.debitList = [];</span>
+<span class="cstat-no" title="statement not covered" >            this.creditList = [];</span>
+<span class="cstat-no" title="statement not covered" >            this.valeList = [];</span>
+<span class="cstat-no" title="statement not covered" >            for (var i = 0; i &lt; this.acceptedCards.length; i++) {</span>
+<span class="cstat-no" title="statement not covered" >                auxStoreCard = this.acceptedCards[i];</span>
+<span class="cstat-no" title="statement not covered" >                if (auxStoreCard.isDebit) {</span>
+<span class="cstat-no" title="statement not covered" >                    this.debitList.push(auxStoreCard);</span>
+                }
+<span class="cstat-no" title="statement not covered" >                if (auxStoreCard.isCredit) {</span>
+<span class="cstat-no" title="statement not covered" >                    this.creditList.push(auxStoreCard);</span>
+                }
+<span class="cstat-no" title="statement not covered" >                if (auxStoreCard.isVale) {</span>
+<span class="cstat-no" title="statement not covered" >                    this.valeList.push(auxStoreCard);</span>
+                }
+            }
+        }
+<span class="cstat-no" title="statement not covered" >        this.offlinePayment = false;</span>
+<span class="cstat-no" title="statement not covered" >        if (data['offlinePayment'] &amp;&amp; this.acceptedCards.length) {</span>
+<span class="cstat-no" title="statement not covered" >            this.offlinePayment = true;</span>
+        }
+<span class="cstat-no" title="statement not covered" >        if (data['installmentsrules']) {</span>
+<span class="cstat-no" title="statement not covered" >            this.installmentsrules = [];</span>
+<span class="cstat-no" title="statement not covered" >            for (var i = 0; i &lt; data['installmentsrules'].length; i++) {</span>
+<span class="cstat-no" title="statement not covered" >                this.installmentsrules.push(new IBInstallment(data['installmentsrules'][i]));</span>
+            }
+        }
+<span class="cstat-no" title="statement not covered" >        if (data['pages']) {</span>
+<span class="cstat-no" title="statement not covered" >            this.pages = [];</span>
+<span class="cstat-no" title="statement not covered" >            for (var i = 0; i &lt; data['pages'].length; i++) {</span>
+<span class="cstat-no" title="statement not covered" >                this.pages.push(new IBPage(data['pages'][i]));</span>
+            }
+        }
+    };
+    IBStore.prototype.setMainMenu = <span class="fstat-no" title="function not covered" >function (menu) {</span>
+<span class="cstat-no" title="statement not covered" >        this.menu = [];</span>
+<span class="cstat-no" title="statement not covered" >        var menuCategoryInterface;</span>
+<span class="cstat-no" title="statement not covered" >        var menuSubInterface;</span>
+<span class="cstat-no" title="statement not covered" >        var subCategories;</span>
+<span class="cstat-no" title="statement not covered" >        for (var i = 0; i &lt; menu.length; i++) {</span>
+<span class="cstat-no" title="statement not covered" >            menuCategoryInterface = {</span>
+                id: menu[i]['id'],
+                title: menu[i]['title'],
+                subCategories: []
+            };
+<span class="cstat-no" title="statement not covered" >            subCategories = menu[i]['sub_categories'];</span>
+<span class="cstat-no" title="statement not covered" >            for (var j = 0; j &lt; subCategories.length; j++) {</span>
+<span class="cstat-no" title="statement not covered" >                menuSubInterface = {</span>
+                    id: subCategories[j]['id'],
+                    title: subCategories[j]['title']
+                };
+<span class="cstat-no" title="statement not covered" >                menuCategoryInterface.subCategories.push(menuSubInterface);</span>
+            }
+<span class="cstat-no" title="statement not covered" >            this.menu.push(menuCategoryInterface);</span>
+        }
+    };
+    IBStore.prototype.getCategory = <span class="fstat-no" title="function not covered" >function (categoryId) {</span>
+<span class="cstat-no" title="statement not covered" >        for (var i = 0; i &lt; this.menu.length; i++) {</span>
+<span class="cstat-no" title="statement not covered" >            if (categoryId == this.menu[i].id) {</span>
+<span class="cstat-no" title="statement not covered" >                return this.menu[i];</span>
+            }
+        }
+    };
+    IBStore.prototype.getPage = <span class="fstat-no" title="function not covered" >function (pageUrl) {</span>
+<span class="cstat-no" title="statement not covered" >        for (var i = 0; i &lt; this.pages.length; i++) {</span>
+<span class="cstat-no" title="statement not covered" >            if (pageUrl == this.pages[i].url_name) {</span>
+<span class="cstat-no" title="statement not covered" >                return this.pages[i];</span>
+            }
+        }
+    };
+    IBStore.prototype.getMedia = <span class="fstat-no" title="function not covered" >function (media) {</span>
+<span class="cstat-no" title="statement not covered" >        var searchMedia = '';</span>
+<span class="cstat-no" title="statement not covered" >        if (media == 'facebook') {</span>
+<span class="cstat-no" title="statement not covered" >            searchMedia = 'facebook_media';</span>
+        }
+<span class="cstat-no" title="statement not covered" >        if (media == 'instagram') {</span>
+<span class="cstat-no" title="statement not covered" >            searchMedia = 'instagram_media';</span>
+        }
+<span class="cstat-no" title="statement not covered" >        if (media == 'twitter') {</span>
+<span class="cstat-no" title="statement not covered" >            searchMedia = 'twitter_media';</span>
+        }
+<span class="cstat-no" title="statement not covered" >        if (media == 'google+') {</span>
+<span class="cstat-no" title="statement not covered" >            searchMedia = 'googlePlus_media';</span>
+        }
+<span class="cstat-no" title="statement not covered" >        for (var i = 0; i &lt; this.medias.length; i++) {</span>
+<span class="cstat-no" title="statement not covered" >            if (this.medias[i][searchMedia]) {</span>
+<span class="cstat-no" title="statement not covered" >                return this.medias[i][searchMedia];</span>
+            }
+        }
+<span class="cstat-no" title="statement not covered" >        return undefined;</span>
+    };
+    return IBStore;
+}(object_model_1.IBObject));
+exports.IBStore = IBStore;
+//# sourceMappingURL=store.model.js.map</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Tue Apr 17 2018 16:56:26 GMT-0300 (-03)
+</div>
+</div>
+<script src="../../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../../sorter.js"></script>
+</body>
+</html>
