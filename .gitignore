@@ -1,0 +1,83 @@
+Skip to content
+This repository
+Search
+Pull requests
+Issues
+Marketplace
+Explore
+ @swallville
+Sign out
+3
+1 0 Cayke/Instabuy-Store-Front Private
+ Code  Issues 0  Pull requests 0  Projects 0  Wiki  Insights
+Instabuy-Store-Front/.gitignore
+4b3f54d  on 8 Sep 2017
+@Cayke Cayke - update gitignore
+@riheldo @Cayke
+     
+52 lines (42 sloc)  597 Bytes
+
+# See http://help.github.com/ignore-files/ for more about ignoring files.
+
+# compiled output
+/dist
+/tmp
+/out-tsc
+/out
+
+#oat
+/aot
+/src/**/*.js
+/src/**/*.js.map
+!/src/assets/**
+
+# dependencies
+/node_modules
+
+# IDEs and editors
+/.idea
+.project
+.classpath
+.c9/
+*.launch
+.settings/
+*.sublime-workspace
+
+# IDE - VSCode
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+
+# misc
+/.sass-cache
+/connect.lock
+/coverage
+/libpeerconnection.log
+npm-debug.log
+testem.log
+/typings
+
+# e2e
+/e2e/*.js
+/e2e/*.map
+
+# System Files
+.DS_Store
+Thumbs.db
+
+package-lock.json
+© 2018 GitHub, Inc.
+Terms
+Privacy
+Security
+Status
+Help
+Contact GitHub
+API
+Training
+Shop
+Blog
+About
+Press h to open a hovercard with more details.
