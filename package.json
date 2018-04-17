@@ -14,14 +14,20 @@
     "type": "git",
     "url": "git+https://github.com/swallville/instabuyModules.git"
   },
-  "keywords": ["typescript"],
-  "author":
-    "Lukas Ferreira Machado <unlisislukasferreira@hotmail.com> (https://instabuy.com.br/)",
+  "keywords": [
+    "typescript"
+  ],
+  "author": "Lukas Ferreira Machado <unlisislukasferreira@hotmail.com> (https://instabuy.com.br/)",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/swallville/instabuyModules/issues"
   },
   "homepage": "https://github.com/swallville/instabuyModules#readme",
+  "files": [
+    { "pattern": "node_modules/reflect-metadata/Reflect.js", "include": true },
+    { "pattern": "src/*.ts", "include": true },
+    { "pattern": "tests/**/*Spec.ts", "include": true } 
+  ], 
   "devDependencies": {
     "@types/chai": "^4.1.2",
     "@types/mocha": "^5.0.0",
@@ -29,6 +35,7 @@
     "coveralls": "^3.0.0",
     "istanbul": "^0.4.5",
     "mocha": "^5.1.0",
+    "reflect-metadata": "^0.1.12",
     "ts-node": "^6.0.0",
     "typescript": "^2.2.0"
   },
