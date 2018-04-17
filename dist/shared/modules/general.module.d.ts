@@ -1,0 +1,23 @@
+export declare function removeSpecialCharacters(str: string): string;
+export declare function fixFloatPoint(value: number): number;
+export declare function isEmpty(value: string): boolean;
+export declare function priceToString(value: string | number): string;
+export declare function validateEmail(email: string): boolean;
+export declare function validateCep(cep: string): boolean;
+export declare function reverseBirthday(bday: string): string;
+export declare function isBirthdayReversed(bday: string): boolean;
+export declare function unreverseBirthday(bday: string): string;
+declare let imagePath: {
+    AMAZON_URL1: string;
+    AMAZON_URL2: string;
+    imgS: (key: string) => string;
+    imgM: (key: string) => string;
+    imgB: (key: string) => string;
+    imgL: (key: string) => string;
+    banner: (key: string) => string;
+    card: (key: string) => string;
+    general: (key: string) => string;
+};
+export { imagePath };
+export declare function copyTextToClipboard(text: string): void;
+export declare function tokenGenerator(size?: number): string;
