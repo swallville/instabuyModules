@@ -1,5 +1,6 @@
 [![Build Status](https://travis-ci.org/swallville/instabuyModules.svg?branch=master)](https://travis-ci.org/swallville/instabuyModules)
 [![DeepScan grade](https://deepscan.io/api/projects/2250/branches/12684/badge/grade.svg)](https://deepscan.io/dashboard#view=project&pid=2250&bid=12684)
+[![npm version](https://badge.fury.io/js/instabuymodules.svg)](https://badge.fury.io/js/instabuymodules)
 [![Coverage Status](https://coveralls.io/repos/github/swallville/instabuyModules/badge.png?branch=master)](https://coveralls.io/github/swallville/instabuyModules?branch=master)
 # instabuyModules
 Instabuy modules for all projects inside instabuy.
