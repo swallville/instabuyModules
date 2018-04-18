@@ -1,6 +1,6 @@
 {
   "name": "instabuymodules",
-  "version": "1.1.4",
+  "version": "1.1.5",
   "description": "Instabuy modules for all projects",
   "main": "dist/index.js",
   "types": "dist/instabuymodules.d.ts",
