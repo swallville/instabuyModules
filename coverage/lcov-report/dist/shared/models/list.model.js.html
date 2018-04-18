@@ -20,24 +20,24 @@
     </h1>
     <div class='clearfix'>
       <div class='fl pad1y space-right2'>
-        <span class="strong">51.06% </span>
+        <span class="strong">63.83% </span>
         <span class="quiet">Statements</span>
-        <span class='fraction'>24/47</span>
+        <span class='fraction'>30/47</span>
       </div>
       <div class='fl pad1y space-right2'>
-        <span class="strong">18.52% </span>
+        <span class="strong">40.74% </span>
         <span class="quiet">Branches</span>
-        <span class='fraction'>5/27</span>
+        <span class='fraction'>11/27</span>
       </div>
       <div class='fl pad1y space-right2'>
-        <span class="strong">41.67% </span>
+        <span class="strong">58.33% </span>
         <span class="quiet">Functions</span>
-        <span class='fraction'>5/12</span>
+        <span class='fraction'>7/12</span>
       </div>
       <div class='fl pad1y space-right2'>
-        <span class="strong">52.27% </span>
+        <span class="strong">65.91% </span>
         <span class="quiet">Lines</span>
-        <span class='fraction'>23/44</span>
+        <span class='fraction'>29/44</span>
       </div>
     </div>
   </div>
@@ -117,26 +117,26 @@
 <span class="cline-any cline-yes">1×</span>
 <span class="cline-any cline-yes">1×</span>
 <span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
 <span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1×</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1×</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1×</span>
 <span class="cline-any cline-yes">1×</span>
 <span class="cline-any cline-yes">1×</span>
 <span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
 <span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1×</span>
 <span class="cline-any cline-no">&nbsp;</span>
@@ -172,11 +172,11 @@ var dateutil_model_1 = require("./dateutil.model");
 var general_module_1 = require("../modules/general.module");
 var IBProductsListItem = (function (_super) {
     __extends(IBProductsListItem, _super);
-<span class="fstat-no" title="function not covered" >    function IBProductsListItem(data) {</span>
-<span class="cstat-no" title="statement not covered" >        var _this = _super.call(this) || this;</span>
-<span class="cstat-no" title="statement not covered" >        if (Object.keys(data).length &gt; 0)</span>
+    function IBProductsListItem(data) {
+        var _this = _super.call(this) || this;
+        <span class="missing-if-branch" title="if path not taken" >I</span>if (Object.keys(data).length &gt; 0)
 <span class="cstat-no" title="statement not covered" >            _this.setData(data);</span>
-<span class="cstat-no" title="statement not covered" >        return _this;</span>
+        return _this;
     }
     IBProductsListItem.prototype.setData = <span class="fstat-no" title="function not covered" >function (data) {</span>
 <span class="cstat-no" title="statement not covered" >        _super.prototype.setData.call(this, data);</span>
@@ -188,11 +188,11 @@ var IBProductsListItem = (function (_super) {
 exports.IBProductsListItem = IBProductsListItem;
 var IBProductsList = (function (_super) {
     __extends(IBProductsList, _super);
-<span class="fstat-no" title="function not covered" >    function IBProductsList(data) {</span>
-<span class="cstat-no" title="statement not covered" >        var _this = _super.call(this) || this;</span>
-<span class="cstat-no" title="statement not covered" >        if (Object.keys(data).length &gt; 0)</span>
+    function IBProductsList(data) {
+        var _this = _super.call(this) || this;
+        <span class="missing-if-branch" title="if path not taken" >I</span>if (Object.keys(data).length &gt; 0)
 <span class="cstat-no" title="statement not covered" >            _this.setData(data);</span>
-<span class="cstat-no" title="statement not covered" >        return _this;</span>
+        return _this;
     }
     IBProductsList.prototype.setData = <span class="fstat-no" title="function not covered" >function (data) {</span>
 <span class="cstat-no" title="statement not covered" >        _super.prototype.setData.call(this, data);</span>
@@ -217,7 +217,7 @@ exports.IBProductsList = IBProductsList;
 </div><!-- /wrapper -->
 <div class='footer quiet pad2 space-top1 center small'>
   Code coverage
-  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Tue Apr 17 2018 22:42:52 GMT-0300 (-03)
+  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Tue Apr 17 2018 23:27:35 GMT-0300 (-03)
 </div>
 </div>
 <script src="../../../prettify.js"></script>
