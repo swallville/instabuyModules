@@ -32,6 +32,7 @@ Instabuy-Store-Front/.gitignore
 
 # dependencies
 /node_modules
+/dist
 
 # IDEs and editors
 /.idea
