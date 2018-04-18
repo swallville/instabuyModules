@@ -26,7 +26,7 @@ var IBRequestService = (function () {
         // protected storeId: string = "58ab8cf7072d412f6a199f88"; // teclar
         this.domain = "https://instabuy.com.br";
         this.api = "/apiv3";
-        if (window.location.host.replace('www.', '').indexOf('localhost:') == -1) {
+        if (window.location.host.toString().replace('www.', '').indexOf('localhost:') == -1) {
             this.startProccess();
         }
         else {
@@ -37,7 +37,7 @@ var IBRequestService = (function () {
         this.storeId = undefined;
         this.subdomain = undefined;
         this.custom_domain = undefined;
-        var _host = window.location.host.replace('www.', '');
+        var _host = window.location.host.toString().replace('www.', '');
         if (_host.indexOf('instabuy.com.br') == -1) {
             this.domain = location.protocol + "//" + _host;
             this.custom_domain = _host;

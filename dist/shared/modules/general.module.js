@@ -46,7 +46,7 @@ function removeSpecialCharacters(str) {
         { 'base': '', 'letters': /[\u002C\u002E\u0027\u0060\u0021\u0022\u0028\u0029\u00BA\u2044\u2215\u002F]/g }
     ];
     for (var i = 0; i < special_characters_map.length; i++)
-        str = str.replace(special_characters_map[i].letters, special_characters_map[i].base);
+        str = str.toString().replace(special_characters_map[i].letters, special_characters_map[i].base);
     str = str.toLowerCase();
     return str;
 }
@@ -67,7 +67,7 @@ function priceToString(value) {
     if (typeof (value) == 'number') {
         value = value.toFixed(2);
         if (value.indexOf('.') != -1) {
-            value = value.replace('.', ',');
+            value = value.toString().replace(".", ",");
             if (value.split(',')[1].length == 1)
                 value += '0';
         }

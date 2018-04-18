@@ -305,7 +305,7 @@ var IBUserService = (function (_super) {
         });
     };
     IBUserService.prototype.makeZipcodeRequest = function (zipcode, callBack) {
-        var url = 'https://api.pagar.me/1/zipcodes/' + zipcode.replace('-', '');
+        var url = 'https://api.pagar.me/1/zipcodes/' + zipcode.toString().replace('-', '');
         this.http.get(url).map(function (response) {
             var responseModel;
             if (response.ok) {

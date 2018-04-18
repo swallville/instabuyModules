@@ -91,9 +91,9 @@ export class IBCombination extends IBObject {
 
     getVisiblePriceString() : string {
         if (this.min_price == this.price) 
-            return 'R$ ' + this.price.toFixed(2).replace('.', ',');
+            return 'R$ ' + this.price.toFixed(2).toString().replace('.', ',');
         else 
-            return 'A partir de R$ ' + this.min_price.toFixed(2).replace('.', ',');
+            return 'A partir de R$ ' + this.min_price.toFixed(2).toString().replace('.', ',');
     }
 }
 

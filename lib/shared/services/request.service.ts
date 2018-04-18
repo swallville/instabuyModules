@@ -39,7 +39,7 @@ export class IBRequestService {
     private api: string = "/apiv3";
 
     constructor(protected http: Http) {
-        if (window.location.host.replace('www.','').indexOf('localhost:') == -1) {
+        if (window.location.host.toString().replace('www.','').indexOf('localhost:') == -1) {
             this.startProccess();
         } else {
             this.storeId = "55c17d73072d4126ea180fe5";
@@ -51,7 +51,7 @@ export class IBRequestService {
         this.subdomain = undefined;
         this.custom_domain = undefined;
 
-        let _host: string = window.location.host.replace('www.','');
+        let _host: string = window.location.host.toString().replace('www.','');
         if (_host.indexOf('instabuy.com.br') == -1) {
             this.domain = location.protocol+"//"+_host;
             this.custom_domain = _host;

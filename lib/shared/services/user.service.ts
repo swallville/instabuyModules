@@ -280,7 +280,7 @@ export class IBUserService extends IBRequestService implements IBSubject {
     }
 
     makeZipcodeRequest(zipcode:string, callBack?:IBCallBackRequestType):void {
-        let url: string = 'https://api.pagar.me/1/zipcodes/'+zipcode.replace('-','');
+        let url: string = 'https://api.pagar.me/1/zipcodes/'+zipcode.toString().replace('-','');
         this.http.get(url).map(response => {
             let responseModel: IBResponse;
             if (response.ok) {

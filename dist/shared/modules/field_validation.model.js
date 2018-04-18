@@ -25,7 +25,7 @@ var FieldValidation = (function () {
         }
     };
     FieldValidation.isCNPJValid = function (cnpj) {
-        cnpj = cnpj.replace(/[^\d]+/g, '');
+        cnpj = cnpj.toString().replace(/[^\d]+/g, "");
         if (cnpj == '') {
             return false;
         }
@@ -82,7 +82,7 @@ var FieldValidation = (function () {
         if (cpf == '' || cpf == null) {
             return { ValidateCNPJ: false };
         }
-        cpf = cpf.replace(/[^\d]+/g, '');
+        cpf = cpf.toString().replace(/[^\d]+/g, "");
         if (cpf.length != 11) {
             return { ValidateCNPJ: false };
         }
@@ -121,7 +121,7 @@ var FieldValidation = (function () {
         if (phone == '' || phone == null) {
             return { ValidatePhone: false };
         }
-        phone = phone.replace(/[^\d]+/g, '');
+        phone = phone.toString().replace(/[^\d]+/g, "");
         if (phone.length != 11) {
             return { ValidatePhone: false };
         }

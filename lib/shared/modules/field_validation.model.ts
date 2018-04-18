@@ -26,7 +26,7 @@ export class FieldValidation {
      }
 
     static isCNPJValid(cnpj): boolean {
-        cnpj = cnpj.replace(/[^\d]+/g,'');
+        cnpj = cnpj.toString().replace(/[^\d]+/g, "");
 
         if (cnpj == '') {
             return false;
@@ -92,7 +92,7 @@ export class FieldValidation {
             return {ValidateCNPJ:false};
         }
 
-        cpf = cpf.replace(/[^\d]+/g, '');
+        cpf = cpf.toString().replace(/[^\d]+/g, "");
 
         if (cpf.length != 11) {
              return {ValidateCNPJ:false};
@@ -141,7 +141,7 @@ export class FieldValidation {
             return {ValidatePhone:false};
         }
 
-        phone = phone.replace(/[^\d]+/g, '');
+        phone = phone.toString().replace(/[^\d]+/g, "");
 
         if (phone.length != 11) {
              return {ValidatePhone:false};
