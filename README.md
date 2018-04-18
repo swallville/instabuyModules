@@ -25,4 +25,4 @@ npm run test
 npm run cover
 ```
 ## How to Publish & Update a Package
-Check [this link](https://docs.npmjs.com/getting-started/publishing-npm-packages#how-to-publish-a-package) for more informations.
+Check [this link](https://docs.npmjs.com/getting-started/publishing-npm-packages#how-to-publish-a-package "Npm Documents") for more informations.
