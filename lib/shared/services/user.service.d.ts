@@ -1,0 +1,44 @@
+import { Http } from "@angular/http";
+import { IBRequestService, IBCallBackRequestType } from './request.service';
+import { IBUser } from '../models/user.model';
+import { IBResponse } from '../models/response.model';
+import { IBObserver, IBSubject, NotifyUpdate } from '../modules/observable.module';
+import { IBCartService } from './cart.service';
+import { IBCard } from '../models/ccard.model';
+import { IBAddress } from '../models/address.model';
+import { Observable } from "rxjs/Observable";
+export declare class IBUserService extends IBRequestService implements IBSubject {
+    protected http: Http;
+    private cartService;
+    observers: Array<IBObserver>;
+    userModel: IBUser;
+    userLoggedIn: boolean;
+    constructor(http: Http, cartService: IBCartService);
+    registerObserver(observer: IBObserver): void;
+    unregisterObserver(observer: IBObserver): void;
+    notifyObservers(message: NotifyUpdate): void;
+    fetchUser(): Observable<IBResponse>;
+    fetchUserCards(): Observable<IBResponse>;
+    fetchUserAddresses(): Observable<IBResponse>;
+    fetchUserCoupons(): Observable<IBResponse>;
+    pullUserCards(callBack?: IBCallBackRequestType): void;
+    pullUserAdresses(callBack?: IBCallBackRequestType): void;
+    pullUserCoupons(callBack?: IBCallBackRequestType): void;
+    fetchUserOrders(): Observable<IBResponse>;
+    pullOrders(callBack?: IBCallBackRequestType): void;
+    pullUser(cardPull?: boolean, addressPull?: boolean, couponPull?: boolean, callBack?: IBCallBackRequestType): void;
+    makeLogin(email: string, password: string, callBack?: IBCallBackRequestType): void;
+    makeLogout(callBack?: IBCallBackRequestType): void;
+    requestNewPassword(email: string, callBack?: IBCallBackRequestType): void;
+    validateRecoveryPasswordToken(token: string, callBack?: IBCallBackRequestType): void;
+    changePassword(password: string, token: string, callBack?: IBCallBackRequestType): void;
+    updatePassword(oldPassword: string, newPassword: string, callBack?: IBCallBackRequestType): void;
+    createUser(userModel: IBUser, password?: string, facebook_id?: string, callBack?: IBCallBackRequestType): void;
+    saveUser(callBack?: IBCallBackRequestType): void;
+    insertCCard(ccardModel: IBCard, callBack?: IBCallBackRequestType): void;
+    deleteCCard(ccardModel: IBCard, callBack?: IBCallBackRequestType): void;
+    insertAddress(addressModel: IBAddress, callBack?: IBCallBackRequestType): void;
+    /** Pede pro servidor remover o endereco do usuario, e depois remove o endereco local, se estiver na lisa */
+    deleteAddress(addressModel: IBAddress, callBack?: IBCallBackRequestType): void;
+    makeZipcodeRequest(zipcode: string, callBack?: IBCallBackRequestType): void;
+}

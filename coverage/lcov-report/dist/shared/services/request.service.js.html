@@ -166,21 +166,7 @@
 121
 122
 123
-124
-125
-126
-127
-128
-129
-130
-131
-132
-133
-134
-135
-136
-137
-138</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+124</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1×</span>
 <span class="cline-any cline-yes">1×</span>
 <span class="cline-any cline-yes">1×</span>
@@ -198,14 +184,6 @@
 <span class="cline-any cline-yes">1×</span>
 <span class="cline-any cline-yes">1×</span>
 <span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
@@ -232,8 +210,6 @@
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1×</span>
 <span class="cline-any cline-no">&nbsp;</span>
@@ -265,7 +241,6 @@
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1×</span>
 <span class="cline-any cline-no">&nbsp;</span>
@@ -299,13 +274,10 @@
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1×</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
@@ -335,14 +307,6 @@ var response_model_1 = require("../models/response.model");
 var IBRequestService = (function () {
 <span class="fstat-no" title="function not covered" >    function IBRequestService(http) {</span>
 <span class="cstat-no" title="statement not covered" >        this.http = http;</span>
-        // protected storeId: string = "56e2df40072d4127659b32d5"; // laconfesserie
-        // protected storeId: string = "55ca6b49072d4167d3a815e9"; // hortimais
-        // protected storeId: string = "56d5afd6072d4145fc30d70e"; // don durica
-        // protected storeId: string = "56fc1959072d4150caab0f60"; // benutri
-        // protected storeId: string = "57edc21b072d41439fc24175"; // pomar
-        // protected storeId: string = "55cb8eeb072d416ddda815e7"; // pao dourado
-        // protected storeId: string = "55c17d73072d4126ea180fe5"; // cayke store
-        // protected storeId: string = "58ab8cf7072d412f6a199f88"; // teclar
 <span class="cstat-no" title="statement not covered" >        this.domain = "https://instabuy.com.br";</span>
 <span class="cstat-no" title="statement not covered" >        this.api = "/apiv3";</span>
 <span class="cstat-no" title="statement not covered" >        if (window.location.host.toString().replace('www.', '').indexOf('localhost:') == -1) {</span>
@@ -370,8 +334,6 @@ var IBRequestService = (function () {
 <span class="cstat-no" title="statement not covered" >            return value.split(' ').join('');</span>
 <span class="cstat-no" title="statement not covered" >        return "";</span>
     };
-    // PREPARACAO DA CHAMADA
-    // NAO EH PRECISO OBRIGATORIO OS CAMPOS DE ARGS, DOMAIN, API
     IBRequestService.prototype.createUrl = <span class="fstat-no" title="function not covered" >function (endpoint, args, domain, api) {</span>
 <span class="cstat-no" title="statement not covered" >        if (args === void 0) { <span class="cstat-no" title="statement not covered" >args = ''; </span>}</span>
 <span class="cstat-no" title="statement not covered" >        if (domain === void 0) { <span class="cstat-no" title="statement not covered" >domain = ''; </span>}</span>
@@ -403,7 +365,6 @@ var IBRequestService = (function () {
 <span class="cstat-no" title="statement not covered" >        var url = domain + api + endpoint + args;</span>
 <span class="cstat-no" title="statement not covered" >        return url;</span>
     };
-    // CHAMADA GERAL
     IBRequestService.prototype.getRequest = <span class="fstat-no" title="function not covered" >function (url) {</span>
 <span class="cstat-no" title="statement not covered" >        var options = new http_1.RequestOptions();</span>
 <span class="cstat-no" title="statement not covered" >        options.withCredentials = true;</span>
@@ -436,13 +397,10 @@ var IBRequestService = (function () {
 <span class="cstat-no" title="statement not covered" >        return this.http.delete(url, options)</span>
             .map(<span class="fstat-no" title="function not covered" >function (response) {</span> <span class="cstat-no" title="statement not covered" >return new response_model_1.IBResponse(response.json()); </span>});
     };
-    //PUBLIC METHODS
     IBRequestService.prototype.uploadFile = <span class="fstat-no" title="function not covered" >function (file) {</span>
 <span class="cstat-no" title="statement not covered" >        var formData = new FormData();</span>
 <span class="cstat-no" title="statement not covered" >        formData.append('file', file);</span>
 <span class="cstat-no" title="statement not covered" >        var headers = new http_1.Headers();</span>
-        // It is very important to leave the Content-Type empty
-        // do not use headers.append('Content-Type', 'multipart/form-data');
 <span class="cstat-no" title="statement not covered" >        var options = new http_1.RequestOptions({ headers: headers });</span>
 <span class="cstat-no" title="statement not covered" >        return this.http.post(this.createUrl('upload_file.json'), formData, options)</span>
             .map(<span class="fstat-no" title="function not covered" >function (response) {</span> <span class="cstat-no" title="statement not covered" >return new response_model_1.IBResponse(response.json()); </span>});
@@ -460,7 +418,7 @@ exports.IBRequestService = IBRequestService;
 </div><!-- /wrapper -->
 <div class='footer quiet pad2 space-top1 center small'>
   Code coverage
-  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Wed Apr 18 2018 00:22:25 GMT-0300 (-03)
+  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Wed Apr 18 2018 10:38:49 GMT-0300 (-03)
 </div>
 </div>
 <script src="../../../prettify.js"></script>

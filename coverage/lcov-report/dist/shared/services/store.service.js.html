@@ -390,15 +390,7 @@
 345
 346
 347
-348
-349
-350
-351
-352
-353
-354
-355
-356</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+348</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1×</span>
 <span class="cline-any cline-yes">1×</span>
 <span class="cline-any cline-no">&nbsp;</span>
@@ -484,7 +476,6 @@
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1×</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -531,9 +522,6 @@
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1×</span>
 <span class="cline-any cline-no">&nbsp;</span>
@@ -586,11 +574,9 @@
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1×</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1×</span>
 <span class="cline-any cline-no">&nbsp;</span>
@@ -684,9 +670,7 @@
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
@@ -839,7 +823,6 @@ var IBStoreService = (function (_super) {
 <span class="cstat-no" title="statement not covered" >        _this.observers = new Array();</span>
 <span class="cstat-no" title="statement not covered" >        return _this;</span>
     }
-    // metodos para observer, NAO SOBREESCREVER
     IBStoreService.prototype.registerObserver = <span class="fstat-no" title="function not covered" >function (observer) {</span>
 <span class="cstat-no" title="statement not covered" >        this.observers.push(observer);</span>
     };
@@ -858,7 +841,7 @@ var IBStoreService = (function (_super) {
 <span class="cstat-no" title="statement not covered" >        var args = '?fields=' + fields;</span>
 <span class="cstat-no" title="statement not covered" >        var xmlHttp = new XMLHttpRequest();</span>
 <span class="cstat-no" title="statement not covered" >        var url = this.createUrl('/store.json', args);</span>
-<span class="cstat-no" title="statement not covered" >        xmlHttp.open("GET", url, false); </span>// false for synchronous request
+<span class="cstat-no" title="statement not covered" >        xmlHttp.open("GET", url, false);</span>
 <span class="cstat-no" title="statement not covered" >        xmlHttp.withCredentials = true;</span>
 <span class="cstat-no" title="statement not covered" >        xmlHttp.send(null);</span>
 <span class="cstat-no" title="statement not covered" >        var response = new response_model_1.IBResponse(JSON.parse(xmlHttp.responseText));</span>
@@ -880,16 +863,13 @@ var IBStoreService = (function (_super) {
 <span class="cstat-no" title="statement not covered" >        var args = '?subdomain=' + subdomain + '&amp;fields=' + fields;</span>
 <span class="cstat-no" title="statement not covered" >        var xmlHttp = new XMLHttpRequest();</span>
 <span class="cstat-no" title="statement not covered" >        var url = "https://instabuy.com.br/apiv3/store.json" + args;</span>
-<span class="cstat-no" title="statement not covered" >        xmlHttp.open("GET", url, false); </span>// false for synchronous request
+<span class="cstat-no" title="statement not covered" >        xmlHttp.open("GET", url, false);</span>
 <span class="cstat-no" title="statement not covered" >        xmlHttp.withCredentials = true;</span>
 <span class="cstat-no" title="statement not covered" >        xmlHttp.send(null);</span>
 <span class="cstat-no" title="statement not covered" >        var response = new response_model_1.IBResponse(JSON.parse(xmlHttp.responseText));</span>
 <span class="cstat-no" title="statement not covered" >        this.storeModel.setData(response.data);</span>
 <span class="cstat-no" title="statement not covered" >        this.storeId = this.storeModel.id;</span>
     };
-    // 
-    // CHAMADAS AUTOMATICAS
-    // 
     IBStoreService.prototype.fetchItems = <span class="fstat-no" title="function not covered" >function (option) {</span>
 <span class="cstat-no" title="statement not covered" >        var endpoint = "/item.json";</span>
 <span class="cstat-no" title="statement not covered" >        var args = option.args();</span>
@@ -941,12 +921,10 @@ var IBStoreService = (function (_super) {
 <span class="cstat-no" title="statement not covered" >            callBack(items, responseModel);</span>
         });
     };
-    /** Retorna observable da requisicao de layout da pagina */
     IBStoreService.prototype.fetchLayout = <span class="fstat-no" title="function not covered" >function () {</span>
 <span class="cstat-no" title="statement not covered" >        var endpoint = "/layout.json";</span>
 <span class="cstat-no" title="statement not covered" >        return this.getRequest(this.createUrl(endpoint));</span>
     };
-    /** Faz requisicao de layout e insere o layout na loja */
     IBStoreService.prototype.pullLayout = <span class="fstat-no" title="function not covered" >function (callBack) {</span>
 <span class="cstat-no" title="statement not covered" >        var _this = this;</span>
 <span class="cstat-no" title="statement not covered" >        this.fetchLayout().subscribe(<span class="fstat-no" title="function not covered" >function (responseModel) {</span></span>
@@ -1039,11 +1017,9 @@ var IBStoreService = (function (_super) {
 <span class="cstat-no" title="statement not covered" >            break;</span>
         }
 <span class="cstat-no" title="statement not covered" >        if (hasErrors) {</span>
-            // realiza o tratamento de erros
 <span class="cstat-no" title="statement not covered" >            errorCallBack(fieldErrors);</span>
         }
         else {
-            // se não há erros, gera o card_hash...
 <span class="cstat-no" title="statement not covered" >            PMCard.generateHash(<span class="fstat-no" title="function not covered" >function (cardHash) {</span></span>
 <span class="cstat-no" title="statement not covered" >                successCallBack(cardHash);</span>
             });
@@ -1114,7 +1090,7 @@ exports.IBStoreService = IBStoreService;
 </div><!-- /wrapper -->
 <div class='footer quiet pad2 space-top1 center small'>
   Code coverage
-  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Wed Apr 18 2018 00:22:25 GMT-0300 (-03)
+  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Wed Apr 18 2018 10:38:49 GMT-0300 (-03)
 </div>
 </div>
 <script src="../../../prettify.js"></script>

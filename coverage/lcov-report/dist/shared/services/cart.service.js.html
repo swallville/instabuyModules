@@ -337,21 +337,7 @@
 292
 293
 294
-295
-296
-297
-298
-299
-300
-301
-302
-303
-304
-305
-306
-307
-308
-309</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+295</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1×</span>
 <span class="cline-any cline-yes">1×</span>
 <span class="cline-any cline-no">&nbsp;</span>
@@ -392,7 +378,6 @@
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1×</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
@@ -406,7 +391,6 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1×</span>
 <span class="cline-any cline-no">&nbsp;</span>
@@ -467,17 +451,9 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1×</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
@@ -488,11 +464,7 @@
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -697,10 +669,9 @@ var IBCartService = (function (_super) {
 <span class="cstat-no" title="statement not covered" >        _this.mergeCommandsObj = {};</span>
 <span class="cstat-no" title="statement not covered" >        _this.cartModel = new cart_model_1.IBCart();</span>
 <span class="cstat-no" title="statement not covered" >        _this.itemsObservable = new items_observer_model_1.IBItemsObservable();</span>
-<span class="cstat-no" title="statement not covered" >        _this.pullCart(); </span>// pull cart for user
+<span class="cstat-no" title="statement not covered" >        _this.pullCart();</span>
 <span class="cstat-no" title="statement not covered" >        return _this;</span>
     }
-    // esvazia carrinho
     IBCartService.prototype.clearCart = <span class="fstat-no" title="function not covered" >function () {</span>
 <span class="cstat-no" title="statement not covered" >        for (var _i = 0, _a = this.cartModel.products; _i &lt; _a.length; _i++) {</span>
 <span class="cstat-no" title="statement not covered" >            var prod = _a[_i];</span>
@@ -715,7 +686,6 @@ var IBCartService = (function (_super) {
 <span class="cstat-no" title="statement not covered" >        this.cartModel.products = [];</span>
 <span class="cstat-no" title="statement not covered" >        this.cartModel.kits = [];</span>
     };
-    // REALIZA A CHAMADA DO CARRINHO DO USUARIO
     IBCartService.prototype.fetchCart = <span class="fstat-no" title="function not covered" >function () {</span>
 <span class="cstat-no" title="statement not covered" >        var endpoint = "/cart.json";</span>
 <span class="cstat-no" title="statement not covered" >        return this.getRequest(this.createUrl(endpoint));</span>
@@ -775,17 +745,10 @@ var IBCartService = (function (_super) {
         };
 <span class="cstat-no" title="statement not covered" >        return this.postRequest(this.createUrl(endpoint), params);</span>
     };
-    //----------------------------------------------------------------------------------------------------------------------------------
-    //----------------------------------------------------------------------------------------------------------------------------------
-    //-------------------------------------------CONTROLE DE QUANTIDADES DE PRODUTOS ---------------------------------------------------
-    //----------------------------------------------------------------------------------------------------------------------------------
-    //----------------------------------------------------------------------------------------------------------------------------------
     IBCartService.prototype.setQtdOnCartOnItemsAndSubscribe = <span class="fstat-no" title="function not covered" >function (items) {</span>
 <span class="cstat-no" title="statement not covered" >        for (var _i = 0, items_1 = items; _i &lt; items_1.length; _i++) {</span>
 <span class="cstat-no" title="statement not covered" >            var item = items_1[_i];</span>
-            //subscribe to receive qtds changes
 <span class="cstat-no" title="statement not covered" >            this.itemsObservable.observers.push(item);</span>
-            //qtd validation
 <span class="cstat-no" title="statement not covered" >            if (item.item_type == 'product') {</span>
 <span class="cstat-no" title="statement not covered" >                var product = item;</span>
 <span class="cstat-no" title="statement not covered" >                for (var _a = 0, _b = this.cartModel.products; _a &lt; _b.length; _a++) {</span>
@@ -803,11 +766,6 @@ var IBCartService = (function (_super) {
             }
         }
     };
-    //----------------------------------------------------------------------------------------------------------------------------------
-    //----------------------------------------------------------------------------------------------------------------------------------
-    //----------------------------------------------------------------------------------------------------------------------------------
-    //----------------------------------------------------------------------------------------------------------------------------------
-    //----------------------------------------------------------------------------------------------------------------------------------
     IBCartService.prototype.setItemOnCart = <span class="fstat-no" title="function not covered" >function (item, product_model, attachment, callBack) {</span>
 <span class="cstat-no" title="statement not covered" >        var cartDoc;</span>
 <span class="cstat-no" title="statement not covered" >        var request_id;</span>
@@ -973,7 +931,7 @@ exports.IBCartService = IBCartService;
 </div><!-- /wrapper -->
 <div class='footer quiet pad2 space-top1 center small'>
   Code coverage
-  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Wed Apr 18 2018 00:22:25 GMT-0300 (-03)
+  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Wed Apr 18 2018 10:38:49 GMT-0300 (-03)
 </div>
 </div>
 <script src="../../../prettify.js"></script>

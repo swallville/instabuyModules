@@ -205,27 +205,7 @@
 160
 161
 162
-163
-164
-165
-166
-167
-168
-169
-170
-171
-172
-173
-174
-175
-176
-177
-178
-179
-180
-181
-182
-183</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+163</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1×</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -358,35 +338,15 @@
 <span class="cline-any cline-yes">1×</span>
 <span class="cline-any cline-yes">1×</span>
 <span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
@@ -540,35 +500,15 @@ var imagePath = {
 exports.imagePath = imagePath;
 <span class="fstat-no" title="function not covered" >function copyTextToClipboard(text) {</span>
 <span class="cstat-no" title="statement not covered" >    var textArea = document.createElement("textarea");</span>
-    //
-    // *** This styling is an extra step which is likely not required. ***
-    //
-    // Why is it here? To ensure:
-    // 1. the element is able to have focus and selection.
-    // 2. if element was to flash render it has minimal visual impact.
-    // 3. less flakyness with selection and copying which **might** occur if
-    //    the textarea element is not visible.
-    //
-    // The likelihood is the element won't even render, not even a flash,
-    // so some of these are just precautions. However in IE the element
-    // is visible whilst the popup box asking the user for permission for
-    // the web page to copy to the clipboard.
-    //
-    // Place in top-left corner of screen regardless of scroll position.
 <span class="cstat-no" title="statement not covered" >    textArea.style.position = 'fixed';</span>
 <span class="cstat-no" title="statement not covered" >    textArea.style.top = '0';</span>
 <span class="cstat-no" title="statement not covered" >    textArea.style.left = '0';</span>
-    // Ensure it has a small width and height. Setting to 1px / 1em
-    // doesn't work as this gives a negative w/h on some browsers.
 <span class="cstat-no" title="statement not covered" >    textArea.style.width = '2em';</span>
 <span class="cstat-no" title="statement not covered" >    textArea.style.height = '2em';</span>
-    // We don't need padding, reducing the size if it does flash render.
 <span class="cstat-no" title="statement not covered" >    textArea.style.padding = '0';</span>
-    // Clean up any borders.
 <span class="cstat-no" title="statement not covered" >    textArea.style.border = 'none';</span>
 <span class="cstat-no" title="statement not covered" >    textArea.style.outline = 'none';</span>
 <span class="cstat-no" title="statement not covered" >    textArea.style.boxShadow = 'none';</span>
-    // Avoid flash of white box if rendered for any reason.
 <span class="cstat-no" title="statement not covered" >    textArea.style.background = 'transparent';</span>
 <span class="cstat-no" title="statement not covered" >    textArea.value = text;</span>
 <span class="cstat-no" title="statement not covered" >    document.body.appendChild(textArea);</span>
@@ -595,7 +535,7 @@ exports.tokenGenerator = tokenGenerator;
 </div><!-- /wrapper -->
 <div class='footer quiet pad2 space-top1 center small'>
   Code coverage
-  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Wed Apr 18 2018 00:22:25 GMT-0300 (-03)
+  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Wed Apr 18 2018 10:38:49 GMT-0300 (-03)
 </div>
 </div>
 <script src="../../../prettify.js"></script>

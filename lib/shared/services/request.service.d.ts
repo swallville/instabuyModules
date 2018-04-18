@@ -1,0 +1,31 @@
+import { Http } from "@angular/http";
+import 'rxjs/add/operator/map';
+import { IBResponse } from "../models/response.model";
+import { Observable } from "rxjs/Observable";
+import { IBProduct } from "../models/product.model";
+import { IBProductsKit } from "../models/productskit.model";
+import { IBItem } from "../models/item.model";
+import { IBProductsList } from "../models/list.model";
+export declare type IBCallBackRequestType = (responseModel: IBResponse) => void;
+export declare type IBCallBackItemsType = (products: Array<IBItem>, responseModel: IBResponse) => void;
+export declare type IBCallBackProductType = (productModel: IBProduct, responseModel: IBResponse) => void;
+export declare type IBCallBackKitType = (combination: IBProductsKit, responseModel: IBResponse) => void;
+export declare type IBCallBackListsType = (lists: Array<IBProductsList>, responseModel: IBResponse) => void;
+export declare class IBRequestService {
+    protected http: Http;
+    private domain;
+    protected storeId: string;
+    protected subdomain: string;
+    protected custom_domain: string;
+    private api;
+    constructor(http: Http);
+    private startProccess();
+    removeSpaces(value: string): string;
+    createUrl(endpoint: string, args?: string, domain?: string, api?: string): string;
+    getRequest(url: string): Observable<IBResponse>;
+    postRequest(url: string, postDocument: object): Observable<IBResponse>;
+    postXWWFormUrlEnconded(url: string, postDocument: object): Observable<IBResponse>;
+    putRequest(url: string, postDocument: object): Observable<IBResponse>;
+    deleteRequest(url: string): Observable<IBResponse>;
+    uploadFile(file: File): Observable<IBResponse>;
+}
