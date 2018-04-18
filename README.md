@@ -3,7 +3,7 @@
 [![npm version](https://badge.fury.io/js/instabuymodules.svg)](https://badge.fury.io/js/instabuymodules)
 [![Coverage Status](https://coveralls.io/repos/github/swallville/instabuyModules/badge.png?branch=master)](https://coveralls.io/github/swallville/instabuyModules?branch=master)
 # instabuyModules
-Instabuy modules for all projects inside instabuy.
+Instabuy modules for all projects inside [instabuy](https://instabuy.com.br "Instabuy website") webservices.
 
 ## Installation 
 ```sh
