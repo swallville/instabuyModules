@@ -86,7 +86,7 @@ export class FieldValidation {
     }
 
     static ValidateCPF(control: FormControl):any {
-        let cpf = control.value;
+        let cpf: string = control.value;
 
         if (cpf == '' || cpf == null) {
             return {ValidateCNPJ:false};
