@@ -24,10 +24,7 @@
   },
   "homepage": "https://github.com/swallville/instabuyModules#readme",
   "files": [
-    {
-      "pattern": "node_modules/reflect-metadata/Reflect.js",
-      "include": true
-    }
+    "node_modules/reflect-metadata/Reflect.js"
   ],
   "devDependencies": {
     "@types/chai": "^4.1.2",
