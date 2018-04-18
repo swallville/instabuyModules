@@ -8,10 +8,12 @@ var index = require('../dist/index.js');
 describe('module tests', () => {
     it('should exist IBObject module', () => {
         expect(new index.IBObject()).to.exist;
+        expect(new index.IBObject()).to.be.an("object");
     });
 
     it("should exist IBCard module", () => {
         expect(new index.IBCard()).to.exist;
+        expect(new index.IBCard()).to.be.an("object");
     });
 
     it("should include IBAddress", () => {
