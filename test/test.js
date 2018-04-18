@@ -1,7 +1,7 @@
 'use strict';
 var reflect = require('reflect-metadata')
 var expect = require('chai').expect;
-var describe = require('mocha').describe
+var describe = require('mocha').describe;
 var it = require("mocha").it;
 var index = require('../dist/index.js');
 
