@@ -24,5 +24,10 @@ npm run test
 ```sh
 npm run cover
 ```
+### Generate typescript descriptor 
+```sh
+dts-bundle --name instabuymodules --main ./lib/index.d.ts
+dts-bundle --name instabuymodules --main ./dist/index.d.ts
+```
 ## How to Publish & Update a Package
 Check [this link](https://docs.npmjs.com/getting-started/publishing-npm-packages#how-to-publish-a-package "Npm Documents") for more informations.
