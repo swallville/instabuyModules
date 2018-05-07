@@ -28,7 +28,8 @@
     "dist/index.js",
     "dist/instabuymodules.d.ts",
     "dist/lib",
-    "dist/shared"
+    "dist/shared",
+    "dist/test"
   ],
   "devDependencies": {
     "@types/chai": "^4.1.2",
