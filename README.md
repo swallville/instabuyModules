@@ -1,6 +1,6 @@
 # ![instabuyModules](media/instabuy-logo.png)
 
-🔖 Instabuy modules for **all projects**, inside [instabuy](https://instabuy.com.br "Instabuy website") webservices.
+🔖 Instabuy modules for **all projects** inside [instabuy](https://instabuy.com.br "Instabuy website") webservices.
 
 🌟 Plus some extra features for testing and deploy.
 
