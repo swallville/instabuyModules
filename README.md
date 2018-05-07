@@ -1,8 +1,8 @@
 # ![instabuyModules](media/instabuy-logo.png)
 
-🔖 Instabuy modules for **all projects** inside [instabuy](https://instabuy.com.br "Instabuy website") webservices.
+:computer: Instabuy modules for **all projects** inside [instabuy](https://instabuy.com.br "Instabuy website") webservices.
 
-🌟 Plus some extra features for testing and deploy.
+:star2: Plus some extra features for testing and deploy.
 
 ## Installation 
 ```sh
