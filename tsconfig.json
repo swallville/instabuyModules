@@ -63,6 +63,8 @@
     "test/*.ts",
     "test/*.js",
     "lib/*.ts",
-    "lib/index.ts"
+    "lib/index.ts",
+    "shared/*.ts",
+    "shared/index.ts"
   ]
 }
