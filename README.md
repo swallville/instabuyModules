@@ -19,7 +19,7 @@ bower install instabuymodules --save
 | License    | [![License: MIT](https://img.shields.io/github/license/mashape/apistatus.svg?sytle=flat-square)](https://github.com/swallville/instabuyModules/blob/master/license.md) |
 | Popularity | [![npm downloads](https://img.shields.io/npm/dm/instabuyModules.svg)](https://npm-stat.com/charts.html?package=instabuyModules) |
 | Testing    | [![Build Status](https://travis-ci.org/swallville/instabuyModules.svg?branch=master)](https://travis-ci.org/swallville/instabuyModules) [![DeepScan grade](https://deepscan.io/api/projects/2250/branches/12684/badge/grade.svg)](https://deepscan.io/dashboard#view=project&pid=2250&bid=12684) [![Coverage Status](https://coveralls.io/repos/github/swallville/instabuyModules/badge.svg?branch=master)](https://coveralls.io/github/swallville/instabuyModules?branch=master) |
-| Quality    | [![devDependency status](https://david-dm.org/swallville/instabuyModules.svg)](https://david-dm.org/swallville/instabuyModules.svg?type=dev) [![dev dependency status](https://img.shields.io/david/dev/swallville/instabuyModules.svg?style=flat-square)](https://david-dm.org/swallville/instabuyModules#info=devDependencies) |
+| Quality    | [![dependencies Status](https://david-dm.org/swallville/instabuyModules/status.svg)](https://david-dm.org/swallville/instabuyModules) [![dev dependency status](https://img.shields.io/david/dev/swallville/instabuyModules.svg?style=flat-square)](https://david-dm.org/swallville/instabuyModules#info=devDependencies) |
 | Style      | [![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square)](https://github.com/prettier/prettier) |
 ## Usage
 ### Build 
